@@ -1,0 +1,9 @@
+build/
+install/
+log/
+.local/
+__pycache__/
+*.pyc
+evidence/raw/
+evidence/rosbag*/
+evidence/**/*.mp4

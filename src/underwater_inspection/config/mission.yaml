@@ -1,0 +1,15 @@
+spawn: [-5.0, 0.0, 2.5]
+approach_gate: [2.5, 0.0, 2.5]
+target: [5.5, 0.0, 2.5]
+panel_height: 1.0
+standoff: 1.3
+inspect_seconds: 8.0
+timeout_seconds: 240.0
+water_current: [0.0, 0.10, 0.0]
+robot_radius: 0.4
+planner_margin: 0.55
+bounds: [-6.0, 6.0, -4.0, 4.0]
+obstacles:
+  - {name: pillar_main, x: -1.3, y: 0.0, radius: 0.75}
+  - {name: pillar_side, x: 1.0, y: 2.5, radius: 0.55}
+  - {name: storage_crate, x: -3.0, y: -2.6, radius: 0.85}

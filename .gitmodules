@@ -1,0 +1,6 @@
+[submodule "third_party/stonefish"]
+	path = third_party/stonefish
+	url = https://github.com/HERO-Lab-POSTECH/stonefish.git
+[submodule "third_party/stonefish_sim"]
+	path = third_party/stonefish_sim
+	url = https://github.com/HERO-Lab-POSTECH/stonefish_sim.git
