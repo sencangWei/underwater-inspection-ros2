@@ -5,7 +5,7 @@ import numpy as np
 import pytest
 import yaml
 
-from underwater_inspection.perception import detect_panel
+from underwater_inspection.perception import detect_panel, visual_velocity
 from underwater_inspection.planning import clearance, plan_route
 
 
@@ -48,3 +48,13 @@ def test_actual_underwater_camera_panel_survives_absorption_colour_shift():
     assert 280 < panel['cx'] < 420
     assert 180 < panel['cy'] < 320
     assert 2.0 < panel['range'] < 3.5
+
+
+def test_frontal_visual_servo_stops_at_goal_and_corrects_right_down_offset():
+    goal = {'range': 1.3, 'cx': 320, 'cy': 240}
+    velocity, _ = visual_velocity(goal, (480, 640), 417, 1.3)
+    assert np.allclose(velocity, 0)
+    offset = {'range': 2.8, 'cx': 380, 'cy': 260}
+    velocity, _ = visual_velocity(offset, (480, 640), 417, 1.3)
+    assert 0 < velocity[0] <= .25
+    assert velocity[1] > 0 and velocity[2] > 0

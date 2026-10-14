@@ -4,10 +4,10 @@ INSPECTION_ROOT=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)
 cd "$INSPECTION_ROOT"
 source scripts/env.sh
 git submodule update --init --depth 1
-if git -C third_party/stonefish_sim apply --check "$INSPECTION_ROOT/patches/stonefish_node_lifetime.patch" 2>/dev/null; then
-  git -C third_party/stonefish_sim apply "$INSPECTION_ROOT/patches/stonefish_node_lifetime.patch"
+if git -C third_party/stonefish_sim apply --check "$INSPECTION_ROOT/patches/stonefish_runtime.patch" 2>/dev/null; then
+  git -C third_party/stonefish_sim apply "$INSPECTION_ROOT/patches/stonefish_runtime.patch"
 else
-  git -C third_party/stonefish_sim apply --reverse --check "$INSPECTION_ROOT/patches/stonefish_node_lifetime.patch"
+  git -C third_party/stonefish_sim apply --reverse --check "$INSPECTION_ROOT/patches/stonefish_runtime.patch"
 fi
 mkdir -p .local evidence
 if [[ ! -f .local/glm/glm/glm.hpp ]]; then

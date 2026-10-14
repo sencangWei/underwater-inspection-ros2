@@ -21,3 +21,12 @@ def detect_panel(bgr, focal_length, panel_height):
     area, x, y, w, h = max(candidates)
     return {'bbox': (x, y, w, h), 'cx': x + w / 2, 'cy': y + h / 2,
             'range': focal_length * panel_height / h, 'area': area}
+
+
+def visual_velocity(panel, image_shape, focal_length, standoff):
+    """Body FRD velocity for a frontal panel, with yaw regulated separately."""
+    h, w = image_shape[:2]
+    errors = np.array([panel['range'] - standoff,
+                       (panel['cx'] - w / 2) * panel['range'] / focal_length,
+                       (panel['cy'] - h / 2) * panel['range'] / focal_length])
+    return np.clip(.3 * errors, [-.15, -.2, -.12], [.25, .2, .12]), errors

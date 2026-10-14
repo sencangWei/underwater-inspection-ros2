@@ -12,14 +12,14 @@ import yaml
 from cv_bridge import CvBridge
 from nav_msgs.msg import Odometry
 from rclpy.node import Node
-from rclpy.qos import qos_profile_sensor_data
+from rclpy.qos import qos_profile_sensor_data, QoSProfile, DurabilityPolicy
 from sensor_msgs.msg import CameraInfo, Image
 from std_msgs.msg import String
 from stonefish_control_msgs.msg import TrajectoryPoint
 from stonefish_msgs.srv import SetOceanCurrent
 from visualization_msgs.msg import Marker
 
-from .perception import detect_panel
+from .perception import detect_panel, visual_velocity
 from .planning import clearance, plan_route
 
 
@@ -35,7 +35,11 @@ class InspectionMission(Node):
         self.bridge = CvBridge()
         self.pose = None
         self.yaw = 0.0
+        self.speed = 0.0
+        self.control_mode = 'position'
+        self.velocity_command = [0.0, 0.0, 0.0]
         self.pose_wall = self.image_wall = 0.0
+        self.panel_wall = 0.0
         self.camera = self.sonar = self.detection = None
         self.fx = 640 / (2 * math.tan(math.radians(75) / 2))
         self.phase = 'WAIT_FOR_SENSORS'
@@ -57,14 +61,19 @@ class InspectionMission(Node):
         self.last_tick = None
         self.last_video = -1.0
         self.saved_phases = set()
+        self.sensor_pauses = 0
+        self.paused = False
         self.telemetry = (self.out / 'telemetry.csv').open('w', newline='')
         self.frame_times = (self.out / 'frame_times.csv').open('w', newline='')
         self.frame_csv = csv.writer(self.frame_times)
         self.frame_csv.writerow(['ros_wall_time'])
         self.csv = csv.writer(self.telemetry)
         self.csv.writerow(['ros_wall_time', 'phase', 'x', 'y', 'z', 'yaw', 'panel_range',
-                           'panel_cx', 'panel_cy', 'obstacle_clearance', 'inspect_good_seconds'])
+                           'panel_cx', 'panel_cy', 'obstacle_clearance', 'inspect_good_seconds',
+                           'cmd_u', 'cmd_v', 'cmd_w'])
         self.command = self.create_publisher(TrajectoryPoint, '/bluerov2/cmd_pose', 10)
+        self.mode_pub = self.create_publisher(String, '/bluerov2/control_mode',
+            QoSProfile(depth=1, durability=DurabilityPolicy.TRANSIENT_LOCAL))
         self.status = self.create_publisher(String, '/inspection/status', 10)
         self.dashboard = self.create_publisher(Image, '/inspection/dashboard', qos_profile_sensor_data)
         self.create_subscription(Odometry, '/bluerov2/odometry', self.on_pose, qos_profile_sensor_data)
@@ -87,6 +96,8 @@ class InspectionMission(Node):
     def on_pose(self, msg):
         p, q = msg.pose.pose.position, msg.pose.pose.orientation
         self.pose = [p.x, p.y, p.z]
+        v = msg.twist.twist.linear
+        self.speed = math.sqrt(v.x ** 2 + v.y ** 2 + v.z ** 2)
         self.yaw = math.atan2(2 * (q.w * q.z + q.x * q.y), 1 - 2 * (q.y * q.y + q.z * q.z))
         self.pose_wall = time.monotonic()
 
@@ -100,6 +111,7 @@ class InspectionMission(Node):
         self.detection = detect_panel(self.camera, self.fx, self.cfg['panel_height'])
         if self.detection:
             self.detection_frames += 1
+            self.panel_wall = time.monotonic()
         if self.started is not None and self.pose is not None:
             self.record_view()
 
@@ -113,8 +125,12 @@ class InspectionMission(Node):
         self.events.append(event)
         (self.out / 'events.json').write_text(json.dumps(self.events, indent=2))
         self.get_logger().info(f'PHASE={phase} pose={self.pose}')
+        mode = 'velocity' if phase in ('VISUAL_APPROACH', 'INSPECT_HOLD') else 'position'
+        if mode != self.control_mode:
+            self.mode_pub.publish(String(data=mode))
+            self.control_mode = mode
 
-    def send_pose(self, xyz, yaw):
+    def send_pose(self, xyz, yaw, velocity=(0.0, 0.0, 0.0)):
         self.setpoint = list(xyz)
         msg = TrajectoryPoint()
         msg.header.stamp = self.get_clock().now().to_msg()
@@ -122,7 +138,15 @@ class InspectionMission(Node):
         msg.pose.position.x, msg.pose.position.y, msg.pose.position.z = map(float, xyz)
         msg.pose.orientation.z = math.sin(yaw / 2)
         msg.pose.orientation.w = math.cos(yaw / 2)
+        self.velocity_command = list(map(float, velocity))
+        msg.velocity.linear.x, msg.velocity.linear.y, msg.velocity.linear.z = self.velocity_command
         self.command.publish(msg)
+
+    def stop_for_missing_panel(self):
+        self.inspect_good = 0.0
+        self.send_pose(self.pose, 0.0)
+        if time.monotonic() - self.panel_wall > 3.0:
+            self.finish(False, 'Panel lost during visual servo')
 
     def tick(self):
         now = self.now()
@@ -153,8 +177,24 @@ class InspectionMission(Node):
                 self.finish(False, 'Collision or geometric clearance violation')
             elif now - self.started > self.cfg['timeout_seconds']:
                 self.finish(False, 'Mission timeout')
-            elif time.monotonic() - self.pose_wall > 1.0 or time.monotonic() - self.image_wall > 2.0:
-                self.finish(False, 'Stale pose or camera')
+            else:
+                pose_age = time.monotonic() - self.pose_wall
+                camera_age = time.monotonic() - self.image_wall
+                if pose_age > .5 or camera_age > 1.0:
+                    # Stop the visual velocity command or hold the last measured
+                    # position while the simulator's render/sensor loop recovers.
+                    self.send_pose(self.pose, 0.0)
+                    if not self.paused:
+                        self.sensor_pauses += 1
+                        self.paused = True
+                        self.get_logger().warning('SENSOR_PAUSE: stop advancement until fresh data')
+                    self.inspect_good = 0.0 if self.phase == 'INSPECT_HOLD' else self.inspect_good
+                    if max(pose_age, camera_age) > 5.0:
+                        self.finish(False, 'Sensor outage exceeded 5 seconds')
+                    return
+                if self.paused:
+                    self.paused = False
+                    self.get_logger().info('SENSOR_RESUMED: continuing from fresh data')
         if self.phase in ('TRANSIT_AVOID_OBSTACLES', 'RETURN_HOME'):
             target = list(self.route[self.waypoint]) + [self.cfg['spawn'][2]]
             if math.dist(self.pose, target) < .25:
@@ -168,26 +208,22 @@ class InspectionMission(Node):
                 self.send_pose(target, 0.0)
         elif self.phase == 'SEARCH_PANEL':
             self.send_pose(self.cfg['approach_gate'], 0.0)
-            if self.detection is not None:
+            if self.detection is not None and self.speed < .12 and abs(self.yaw) < .06:
                 self.transition('VISUAL_APPROACH')
             elif now - self.phase_started > 15:
                 self.finish(False, 'Panel not detected at the inspection gate')
         elif self.phase in ('VISUAL_APPROACH', 'INSPECT_HOLD'):
             if self.detection is None:
-                self.send_pose(self.setpoint, self.yaw)
-                if now - self.phase_started > 30:
-                    self.finish(False, 'Panel lost during visual servo')
+                self.stop_for_missing_panel()
             else:
                 d = self.detection
                 h, w = self.camera.shape[:2]
-                bearing = math.atan2(d['cx'] - w / 2, self.fx)
-                dz = (d['cy'] - h / 2) * d['range'] / self.fx
-                dr = d['range'] - self.cfg['standoff']
-                step = float(np.clip(dr, -.15, .4))
-                desired = [self.pose[0] + step * math.cos(self.yaw + bearing),
-                           self.pose[1] + step * math.sin(self.yaw + bearing),
-                           self.pose[2] + float(np.clip(dz, -.15, .15))]
-                self.send_pose(desired, self.yaw + bearing)
+                velocity, errors = visual_velocity(d, self.camera.shape, self.fx, self.cfg['standoff'])
+                dr, _, dz = errors
+                # A velocity PID with a fresh integral handles the slow visual
+                # outer loop. Pose-relative incremental position commands carry
+                # old transit integral into approach and can keep accelerating.
+                self.send_pose(self.pose, 0.0, velocity)
                 good = abs(dr) < .16 and abs(d['cx'] - w / 2) < 25 and abs(dz) < .12
                 if good:
                     self.inspect_good += dt
@@ -205,7 +241,8 @@ class InspectionMission(Node):
             self.send_pose(self.setpoint, 0.0)
         d = self.detection or {}
         self.csv.writerow([now, self.phase, *self.pose, self.yaw, d.get('range', ''),
-                           d.get('cx', ''), d.get('cy', ''), gap, self.inspect_good])
+                           d.get('cx', ''), d.get('cy', ''), gap, self.inspect_good,
+                           *self.velocity_command])
         self.telemetry.flush()
         self.status.publish(String(data=json.dumps({'phase': self.phase, 'pose': self.pose,
             'range': d.get('range'), 'clearance': gap, 'inspect_seconds': self.inspect_good})))
@@ -225,6 +262,7 @@ class InspectionMission(Node):
             'current': self.current_result, 'current_velocity_ned': self.cfg['water_current'],
             'minimum_obstacle_clearance_m': self.min_clearance,
             'contact_bodies': sorted(self.contacts), 'detected_camera_frames': self.detection_frames,
+            'sensor_pause_count': self.sensor_pauses,
             'inspection_required_seconds': self.cfg['inspect_seconds'],
             'inspection_completed_seconds': self.inspect_good,
             'home_error_m': math.dist(self.pose, self.cfg['spawn']),

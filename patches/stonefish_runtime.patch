@@ -1,0 +1,95 @@
+diff --git a/stonefish_control/stonefish_control/stonefish_control/nodes/hybrid_controller_node.py b/stonefish_control/stonefish_control/stonefish_control/nodes/hybrid_controller_node.py
+index da0cc40..4ca159f 100644
+--- a/stonefish_control/stonefish_control/stonefish_control/nodes/hybrid_controller_node.py
++++ b/stonefish_control/stonefish_control/stonefish_control/nodes/hybrid_controller_node.py
+@@ -1,5 +1,6 @@
+ #!/usr/bin/env python3
+ import rclpy
++import time
+ from rclpy.node import Node
+ from rclpy.qos import QoSProfile, DurabilityPolicy, ReliabilityPolicy, HistoryPolicy
+ import numpy as np
+@@ -43,6 +44,8 @@ class HybridController4DOFNode(Node):
+         )
+         
+         self.odom_received = False
++        self.last_odom_wall = 0.0
++        self.last_cmd_wall = 0.0
+         self.cmd_received = False
+         self.current_pose = np.zeros(6)
+         self.current_vel = np.zeros(6)
+@@ -139,6 +142,7 @@ class HybridController4DOFNode(Node):
+                 self.get_logger().info(f'Control mode switched: {old_mode} → {mode}')
+     
+     def odom_callback(self, msg: Odometry):
++        self.last_odom_wall = time.monotonic()
+         self.current_pose[0:3] = [msg.pose.pose.position.x, msg.pose.pose.position.y, msg.pose.pose.position.z]
+         quat = [msg.pose.pose.orientation.x, msg.pose.pose.orientation.y, msg.pose.pose.orientation.z, msg.pose.pose.orientation.w]
+         r = Rotation.from_quat(quat)
+@@ -148,6 +152,7 @@ class HybridController4DOFNode(Node):
+         self.odom_received = True
+     
+     def cmd_callback(self, msg: TrajectoryPoint):
++        self.last_cmd_wall = time.monotonic()
+         self.desired_pose[0:3] = [msg.pose.position.x, msg.pose.position.y, msg.pose.position.z]
+         quat = [msg.pose.orientation.x, msg.pose.orientation.y, msg.pose.orientation.z, msg.pose.orientation.w]
+         r = Rotation.from_quat(quat)
+@@ -159,6 +164,10 @@ class HybridController4DOFNode(Node):
+     def control_loop(self):
+         if not self.odom_received or not self.cmd_received:
+             return
++        if time.monotonic() - self.last_odom_wall > 0.5 or time.monotonic() - self.last_cmd_wall > 0.5:
++            # Never continue applying a stale estimated-state control wrench.
++            self.wrench_pub.publish(WrenchStamped())
++            return
+         current_time = self.get_clock().now()
+         if self.last_time is None:
+             dt = self.control_dt
+diff --git a/stonefish_ros2/src/stonefish_simulator.cpp b/stonefish_ros2/src/stonefish_simulator.cpp
+index e49522a..2acf97d 100644
+--- a/stonefish_ros2/src/stonefish_simulator.cpp
++++ b/stonefish_ros2/src/stonefish_simulator.cpp
+@@ -25,6 +25,9 @@
+ 
+ #include "rclcpp/rclcpp.hpp"
+ #include <Stonefish/utils/SystemUtil.hpp>
++#include <Stonefish/core/Robot.h>
++#include <Stonefish/entities/SolidEntity.h>
++#include <Stonefish/graphics/OpenGLTrackball.h>
+ #include "stonefish_ros2/ROS2SimulationManager.h"
+ #include "stonefish_ros2/ROS2GraphicalSimulationApp.h"
+ 
+@@ -40,11 +43,19 @@ public:
+                            sf::Scalar rate) 
+                            : Node("stonefish_simulator")
+     {   
+-        manager_ = std::shared_ptr<sf::ROS2SimulationManager>(new sf::ROS2SimulationManager(rate, scenarioPath, std::shared_ptr<rclcpp::Node>(this)));
++        manager_ = std::shared_ptr<sf::ROS2SimulationManager>(new sf::ROS2SimulationManager(rate, scenarioPath, std::shared_ptr<rclcpp::Node>(this, [](rclcpp::Node*) {})));
+         app_ = std::shared_ptr<sf::ROS2GraphicalSimulationApp>(new sf::ROS2GraphicalSimulationApp("Stonefish Simulator", 
+                                                                                                  dataPath, s, h, 
+                                                                                                  manager_.get()));
+         app_->Startup();
++        const auto viewRobot = this->declare_parameter<std::string>("view_robot", "");
++        if(!viewRobot.empty())
++        {
++            auto robot = manager_->getRobot(viewRobot);
++            if(robot != nullptr)
++                manager_->getTrackball()->GlueToMoving(robot->getBaseLink());
++            app_->HideHUD();
++        }
+         tickTimer_ = this->create_wall_timer(16667us, std::bind(&sf::ROS2GraphicalSimulationApp::Tick, app_));
+     };
+ 
+diff --git a/stonefish_ros2/src/stonefish_simulator_nogpu.cpp b/stonefish_ros2/src/stonefish_simulator_nogpu.cpp
+index 2448ea5..0e80c19 100644
+--- a/stonefish_ros2/src/stonefish_simulator_nogpu.cpp
++++ b/stonefish_ros2/src/stonefish_simulator_nogpu.cpp
+@@ -38,7 +38,7 @@ public:
+                            sf::Scalar rate) 
+                            : Node("stonefish_simulator_nogpu")
+     {   
+-        manager_ = std::shared_ptr<sf::ROS2SimulationManager>(new sf::ROS2SimulationManager(rate, scenarioPath, std::shared_ptr<rclcpp::Node>(this)));
++        manager_ = std::shared_ptr<sf::ROS2SimulationManager>(new sf::ROS2SimulationManager(rate, scenarioPath, std::shared_ptr<rclcpp::Node>(this, [](rclcpp::Node*) {})));
+         app_ = std::shared_ptr<sf::ROS2ConsoleSimulationApp>(new sf::ROS2ConsoleSimulationApp("Stonefish Simulator", dataPath, manager_.get()));
+         app_->Startup();
+     };

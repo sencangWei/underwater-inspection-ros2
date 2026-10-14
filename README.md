@@ -26,7 +26,7 @@ sudo apt install build-essential cmake libsdl2-dev libfreetype6-dev libopengl-de
   ros-humble-cv-bridge ros-humble-image-transport
 ```
 
-本仓库锁定上游核心 `eb258a83e25888a091105b8c4d77b962732f880a`（1.3.0）和集成 `8915a77ae6d0c220ee3464993d920b578433271f`。构建脚本应用 `patches/stonefish_node_lifetime.patch`，修复上游退出时 Node 被重复删除的错误；保留上游 GPL 许可证和来源。
+本仓库锁定上游核心 `eb258a83e25888a091105b8c4d77b962732f880a`（1.3.0）和集成 `8915a77ae6d0c220ee3464993d920b578433271f`。构建脚本应用 `patches/stonefish_runtime.patch`，修复上游退出时 Node 被重复删除的错误；保留上游 GPL 许可证和来源。
 
 ## 任务与证据
 
