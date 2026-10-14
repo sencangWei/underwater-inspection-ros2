@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "components": {
+    "stonefish": {
+      "tracked_files_compared": 891,
+      "status": ""
+    },
+    "stonefish_sim": {
+      "tracked_files_compared": 475,
+      "status": " M stonefish_control/stonefish_control/stonefish_control/nodes/hybrid_controller_node.py\n M stonefish_ros2/src/stonefish_simulator.cpp\n M stonefish_ros2/src/stonefish_simulator_nogpu.cpp\n"
+    }
+  }
+}

@@ -45,7 +45,7 @@ TRANSIT_AVOID_OBSTACLES → SEARCH_PANEL → VISUAL_APPROACH
 
 ## 已完成的真实演示
 
-[播放/下载82秒Demo](demo/underwater-inspection-demo.mp4) · [验证结果](docs/验证结果.md) · [完整复盘](docs/复盘.md)
+[播放/下载82秒Demo](demo/underwater-inspection-demo.mp4) · [验证结果](docs/验证结果.md) · [完整复盘](docs/复盘.md) · [远端恢复验证](docs/远端恢复验证.md)
 
 ![实际视觉巡检与水下仿真](demo/02-inspection.png)
 

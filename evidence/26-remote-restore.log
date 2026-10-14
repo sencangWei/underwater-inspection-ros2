@@ -1,0 +1,20 @@
+正克隆到 '/home/robot/.cache/underwater-restore-20261014-jBDRmR/repo'...
+子模组 'third_party/stonefish'（https://github.com/HERO-Lab-POSTECH/stonefish.git）已对路径 'third_party/stonefish' 注册
+正克隆到 '/home/robot/.cache/underwater-restore-20261014-jBDRmR/repo/third_party/stonefish'...
+fatal: 参考仓库 '/home/robot/underwater-inspection-ros2/third_party/stonefish' 是一个浅克隆
+fatal: 无法克隆 'https://github.com/HERO-Lab-POSTECH/stonefish.git' 到子模组路径 '/home/robot/.cache/underwater-restore-20261014-jBDRmR/repo/third_party/stonefish'
+克隆 'third_party/stonefish' 失败。按计划重试
+正克隆到 '/home/robot/.cache/underwater-restore-20261014-jBDRmR/repo/third_party/stonefish'...
+fatal: 参考仓库 '/home/robot/underwater-inspection-ros2/third_party/stonefish' 是一个浅克隆
+fatal: 无法克隆 'https://github.com/HERO-Lab-POSTECH/stonefish.git' 到子模组路径 '/home/robot/.cache/underwater-restore-20261014-jBDRmR/repo/third_party/stonefish'
+第二次尝试克隆 'third_party/stonefish' 失败，退出
+子模组 'third_party/stonefish_sim'（https://github.com/HERO-Lab-POSTECH/stonefish_sim.git）已对路径 'third_party/stonefish_sim' 注册
+正克隆到 '/home/robot/.cache/underwater-restore-20261014-jBDRmR/repo/third_party/stonefish'...
+正克隆到 '/home/robot/.cache/underwater-restore-20261014-jBDRmR/repo/third_party/stonefish_sim'...
+Terminated
+正克隆到 '/home/robot/.cache/underwater-restore-20261014-jBDRmR/repo/third_party/stonefish_sim'...
+正在更新文件:  57% (271/475)正在更新文件:  58% (276/475)正在更新文件:  59% (281/475)正在更新文件:  60% (285/475)正在更新文件:  61% (290/475)正在更新文件:  62% (295/475)正在更新文件:  63% (300/475)正在更新文件:  64% (304/475)正在更新文件:  65% (309/475)正在更新文件:  66% (314/475)正在更新文件:  67% (319/475)正在更新文件:  68% (323/475)正在更新文件:  69% (328/475)正在更新文件:  70% (333/475)正在更新文件:  71% (338/475)正在更新文件:  72% (342/475)正在更新文件:  73% (347/475)正在更新文件:  74% (352/475)正在更新文件:  75% (357/475)正在更新文件:  76% (361/475)正在更新文件:  77% (366/475)正在更新文件:  78% (371/475)正在更新文件:  79% (376/475)正在更新文件:  80% (380/475)正在更新文件:  81% (385/475)正在更新文件:  82% (390/475)正在更新文件:  83% (395/475)正在更新文件:  84% (399/475)正在更新文件:  85% (404/475)正在更新文件:  86% (409/475)正在更新文件:  87% (414/475)正在更新文件:  88% (418/475)正在更新文件:  89% (423/475)正在更新文件:  90% (428/475)正在更新文件:  91% (433/475)正在更新文件:  92% (437/475)正在更新文件:  93% (442/475)正在更新文件:  94% (447/475)正在更新文件:  95% (452/475)正在更新文件:  96% (456/475)正在更新文件:  97% (461/475)正在更新文件:  98% (466/475)正在更新文件:  99% (471/475)正在更新文件: 100% (475/475)正在更新文件: 100% (475/475), 完成.
+将 'third_party/stonefish_sim' 的 git 目录从
+'/home/robot/.cache/underwater-restore-20261014-jBDRmR/repo/third_party/stonefish_sim/.git' 迁移至
+'/home/robot/.cache/underwater-restore-20261014-jBDRmR/repo/.git/modules/third_party/stonefish_sim'
+HEAD 现在位于 eb258a8 Merge pull request #1 from HERO-Lab-POSTECH/feat/sonar-segmentation

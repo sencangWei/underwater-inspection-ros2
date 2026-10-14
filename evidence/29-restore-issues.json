@@ -1,0 +1,15 @@
+{
+  "issues": [
+    {
+      "step": "reference-based submodule restore",
+      "error": "reference repository is shallow",
+      "resolution": "core fetched upstream; integration restored from self-contained Git object clone"
+    },
+    {
+      "step": "first restored build",
+      "error": "CMake Error: The source directory does not appear to contain CMakeLists.txt.",
+      "cause": "interrupted multi-submodule initialization left the core index without a checked-out worktree",
+      "resolution": "reset --hard pinned core commit in disposable restored clone, then rerun clean build"
+    }
+  ]
+}
