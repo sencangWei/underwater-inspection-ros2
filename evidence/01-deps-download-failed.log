@@ -1,0 +1,7 @@
+忽略:1 https://mirrors.tuna.tsinghua.edu.cn/ubuntu jammy/main amd64 libglm-dev all 0.9.9.8+ds-2
+忽略:1 https://mirrors.tuna.tsinghua.edu.cn/ubuntu jammy/main amd64 libglm-dev all 0.9.9.8+ds-2
+忽略:1 https://mirrors.tuna.tsinghua.edu.cn/ubuntu jammy/main amd64 libglm-dev all 0.9.9.8+ds-2
+忽略:1 https://mirrors.tuna.tsinghua.edu.cn/ubuntu jammy/main amd64 libglm-dev all 0.9.9.8+ds-2
+错误:1 https://mirrors.tuna.tsinghua.edu.cn/ubuntu jammy/main amd64 libglm-dev all 0.9.9.8+ds-2
+  Could not handshake: The TLS connection was non-properly terminated. [IP: 127.0.0.1 7897]
+E: 无法下载 https://mirrors.tuna.tsinghua.edu.cn/ubuntu/pool/main/g/glm/libglm-dev_0.9.9.8%2bds-2_all.deb  Could not handshake: The TLS connection was non-properly terminated. [IP: 127.0.0.1 7897]

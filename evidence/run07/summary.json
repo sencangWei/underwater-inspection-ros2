@@ -1,0 +1,82 @@
+{
+  "success": true,
+  "reason": "Inspection and return completed",
+  "duration_wall_seconds": 80.7000424861908,
+  "clock_source": "ROS system clock matching upstream sensor stamps; upstream has no /clock publisher",
+  "state_source": "Stonefish ground-truth odometry baseline",
+  "planner": "known-site inflated A* at fixed depth",
+  "perception": "RGB yellow-panel geometric marker detector; no learned model",
+  "current": {
+    "success": true,
+    "message": "Ocean current 0 enabled with velocity [0.000000, 0.100000, 0.000000] m/s."
+  },
+  "current_velocity_ned": [
+    0.0,
+    0.1,
+    0.0
+  ],
+  "minimum_obstacle_clearance_m": 0.2503311661771922,
+  "contact_bodies": [],
+  "detected_camera_frames": 422,
+  "sensor_pause_count": 0,
+  "inspection_required_seconds": 8.0,
+  "inspection_completed_seconds": 8.000427722930908,
+  "home_error_m": 0.2495864763597342,
+  "inspection_range_rmse_m": 0.03652464070866016,
+  "events": [
+    {
+      "ros_wall_time": 1791961058.6675887,
+      "phase": "TRANSIT_AVOID_OBSTACLES",
+      "pose": [
+        -5.002581233128257,
+        0.0009197263214335632,
+        2.4943186487405784
+      ]
+    },
+    {
+      "ros_wall_time": 1791961083.067467,
+      "phase": "SEARCH_PANEL",
+      "pose": [
+        2.317957857681078,
+        -0.1557117158209636,
+        2.4588049038797655
+      ]
+    },
+    {
+      "ros_wall_time": 1791961084.767395,
+      "phase": "VISUAL_APPROACH",
+      "pose": [
+        2.7598379842308796,
+        -0.4101284424662179,
+        2.4742857710264823
+      ]
+    },
+    {
+      "ros_wall_time": 1791961092.0674531,
+      "phase": "INSPECT_HOLD",
+      "pose": [
+        3.8355998951722623,
+        0.088924219014181,
+        2.4262908258507054
+      ]
+    },
+    {
+      "ros_wall_time": 1791961099.9790096,
+      "phase": "RETURN_HOME",
+      "pose": [
+        3.811904548639449,
+        0.0677796684035512,
+        2.5248516296506915
+      ]
+    },
+    {
+      "ros_wall_time": 1791961139.367422,
+      "phase": "COMPLETE",
+      "pose": [
+        -4.752494972646198,
+        -0.02995538256986467,
+        2.488280543043518
+      ]
+    }
+  ]
+}

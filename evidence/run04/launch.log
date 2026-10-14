@@ -1,0 +1,203 @@
+[INFO] [launch]: All log files can be found below /home/robot/.ros/log/2026-10-14-14-41-54-854935-robot-MS-7E19-1976752
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [stonefish_simulator-1]: process started with pid [1976753]
+[INFO] [thruster_allocator-2]: process started with pid [1976755]
+[INFO] [position_controller_node-3]: process started with pid [1976757]
+[INFO] [mission-4]: process started with pid [1976759]
+[INFO] [viewer-5]: process started with pid [1976761]
+[thruster_allocator-2] [INFO] [1791960115.042091120] [bluerov2.thruster_allocator]: Loading TAM from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/robots/bluerov2/config/TAM.yaml
+[thruster_allocator-2] [INFO] [1791960115.044356301] [bluerov2.thruster_allocator]: TAM loaded successfully: 8 thrusters
+[thruster_allocator-2] [INFO] [1791960115.046096494] [bluerov2.thruster_allocator]: Thruster allocator initialized for bluerov2
+[thruster_allocator-2] [INFO] [1791960115.046246142] [bluerov2.thruster_allocator]: Output topic: /bluerov2/setpoint/pwm
+[thruster_allocator-2] [INFO] [1791960115.046380562] [bluerov2.thruster_allocator]: Update rate: 50.0 Hz
+[thruster_allocator-2] [INFO] [1791960115.046515633] [bluerov2.thruster_allocator]: Timeout: 1.0 s
+[position_controller_node-3] [INFO] [1791960115.053288074] [bluerov2.position_controller_4dof]: ============================================================
+[position_controller_node-3] [INFO] [1791960115.053469934] [bluerov2.position_controller_4dof]: Dynamics Loaded (4DOF)
+[position_controller_node-3] [INFO] [1791960115.053605937] [bluerov2.position_controller_4dof]: ============================================================
+[position_controller_node-3] [INFO] [1791960115.053738230] [bluerov2.position_controller_4dof]: Mass: 20.13 kg
+[position_controller_node-3] [INFO] [1791960115.053865822] [bluerov2.position_controller_4dof]: Inertia (Yaw): 0.1300 kg·m²
+[position_controller_node-3] [INFO] [1791960115.053993126] [bluerov2.position_controller_4dof]: COG: [0.0000, 0.0000, 0.1730] m
+[position_controller_node-3] [INFO] [1791960115.054111260] [bluerov2.position_controller_4dof]: COB: [0.0000, 0.0000, -0.1000] m
+[position_controller_node-3] [INFO] [1791960115.054229263] [bluerov2.position_controller_4dof]: Volume: 0.019582 m³
+[position_controller_node-3] [INFO] [1791960115.054343660] [bluerov2.position_controller_4dof]: ------------------------------------------------------------
+[position_controller_node-3] [INFO] [1791960115.054462495] [bluerov2.position_controller_4dof]: Metacentric Height (GM): -0.2730 m
+[position_controller_node-3] [INFO] [1791960115.054580218] [bluerov2.position_controller_4dof]: Buoyancy: 197.68 N
+[position_controller_node-3] [INFO] [1791960115.054693014] [bluerov2.position_controller_4dof]: Weight: 197.69 N
+[position_controller_node-3] [INFO] [1791960115.054805044] [bluerov2.position_controller_4dof]: Net Force: -0.01 N
+[position_controller_node-3] [INFO] [1791960115.054918532] [bluerov2.position_controller_4dof]: Restoring Coeff: 0.0019 Nm/rad
+[position_controller_node-3] [INFO] [1791960115.055037382] [bluerov2.position_controller_4dof]: ✓ PASSIVE STABILITY OK (|GM| >= 0.15m)
+[position_controller_node-3] [INFO] [1791960115.055153077] [bluerov2.position_controller_4dof]: ============================================================
+[position_controller_node-3] [INFO] [1791960115.070696985] [bluerov2.position_controller_4dof]: ============================================================
+[position_controller_node-3] [INFO] [1791960115.070855838] [bluerov2.position_controller_4dof]: 4DOF PID Controller Initialized
+[position_controller_node-3] [INFO] [1791960115.070982675] [bluerov2.position_controller_4dof]: ============================================================
+[position_controller_node-3] [INFO] [1791960115.071247771] [bluerov2.position_controller_4dof]: Kp: [45. 45. 55.  3.]
+[position_controller_node-3] [INFO] [1791960115.071433721] [bluerov2.position_controller_4dof]: Kd: [40.  40.  50.   1.5]
+[position_controller_node-3] [INFO] [1791960115.071612967] [bluerov2.position_controller_4dof]: Ki: [ 5.   5.  10.   0.5]
+[position_controller_node-3] [INFO] [1791960115.071789127] [bluerov2.position_controller_4dof]: Kb: [0.8 0.8 0.8 0.8]
+[position_controller_node-3] [INFO] [1791960115.071919661] [bluerov2.position_controller_4dof]: Control rate: 50.0 Hz
+[position_controller_node-3] [INFO] [1791960115.072043506] [bluerov2.position_controller_4dof]: Feedforward: True
+[position_controller_node-3] [INFO] [1791960115.072172067] [bluerov2.position_controller_4dof]: ============================================================
+[mission-4] [INFO] [1791960115.211465954] [inspection_mission]: Known-map A* transit + RGB visual servo + PID hold; simulator odometry baseline.
+[stonefish_simulator-1] [INFO] Welcome to Stonefish 1.3.
+[stonefish_simulator-1] [INFO] Window created. OpenGL 4.3 contexts created.
+[stonefish_simulator-1] [INFO] Checking GPU capabilities...
+[stonefish_simulator-1] [INFO] Number of texture units available: 192
+[stonefish_simulator-1] [INFO] Maximum texture size: 32768
+[stonefish_simulator-1] [INFO] Maximum number of texture layers: 2048
+[stonefish_simulator-1] [INFO] Maximum number of fragment shader uniforms: 4096
+[stonefish_simulator-1] [INFO] Setting up OpenGL...
+[stonefish_simulator-1] [INFO] Loaded texture from: /home/robot/桌面/机器人仿真/underwater-inspection-ros2/.local/stonefish/share/Stonefish/shaders/logo_64.png
+[stonefish_simulator-1] [INFO] Initializing rendering pipeline:
+[stonefish_simulator-1] [INFO] Loading GUI...
+[stonefish_simulator-1] [INFO] Loaded texture from: /home/robot/桌面/机器人仿真/underwater-inspection-ros2/.local/stonefish/share/Stonefish/shaders/logo_gray_64.png
+[stonefish_simulator-1] [INFO] Loaded texture from: /home/robot/桌面/机器人仿真/underwater-inspection-ros2/.local/stonefish/share/Stonefish/shaders/gui.png
+[stonefish_simulator-1] [INFO] Initialising OpenGL rendering pipeline...
+[stonefish_simulator-1] [INFO] Loading shaders...
+[stonefish_simulator-1] [INFO] Loaded texture from: /home/robot/桌面/机器人仿真/underwater-inspection-ros2/.local/stonefish/share/Stonefish/shaders/flake.png
+[stonefish_simulator-1] [INFO] Initializing simulation:
+[stonefish_simulator-1] [INFO] Building scenario...
+[stonefish_simulator-1] [INFO] Loaded precomputed atmosphere model (20 wavelengths, 5 scattering orders)
+[stonefish_simulator-1] [INFO] Scenario parser: Loading scenario from '/home/robot/underwater-inspection-ros2/install/share/underwater_inspection/scenarios/inspection.scn'.
+[stonefish_simulator-1] [INFO] Scenario parser: Including file '/home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/worlds/common/visual.scn'
+[stonefish_simulator-1] [INFO] Scenario parser: Including file '/home/robot/underwater-inspection-ros2/install/share/underwater_inspection/scenarios/robot.scn'
+[stonefish_simulator-1] [INFO] Generating ocean waves...
+[stonefish_simulator-1] [INFO] Material Neutral (0) created.
+[stonefish_simulator-1] [INFO] Material Rock (1) created.
+[stonefish_simulator-1] [INFO] Material Fiberglass (2) created.
+[stonefish_simulator-1] [INFO] Material Aluminium (3) created.
+[stonefish_simulator-1] [INFO] Material Sand (4) created.
+[stonefish_simulator-1] [INFO] Material Seabed (5) created.
+[stonefish_simulator-1] [INFO] Material Concrete (6) created.
+[stonefish_simulator-1] [INFO] Material Steel (7) created.
+[stonefish_simulator-1] [INFO] Loaded texture from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/worlds/meshes/SoilBeach0078_1_350.jpg
+[stonefish_simulator-1] [INFO] Loaded texture from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/models/gas_canister/meshes/gas_canister.png
+[stonefish_simulator-1] [INFO] Loaded texture from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/models/gas_tank/meshes/gas_tank.png
+[stonefish_simulator-1] [INFO] Loaded texture from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/models/oil_drum/meshes/oil_drum.png
+[stonefish_simulator-1] [INFO] Loaded texture from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/models/rust_pipe/meshes/rust_pipe.png
+[stonefish_simulator-1] [INFO] Loaded texture from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/models/turbines/textures/Turbine_Base_Diffuse.png
+[stonefish_simulator-1] [INFO] Loaded texture from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/models/turbines/textures/Turbine_Main_Diffuse.png
+[stonefish_simulator-1] [INFO] Loaded texture from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/robots/bluerov2/meshes/br2.png
+[stonefish_simulator-1] [INFO] Loading geometry from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/robots/bluerov2/meshes/bluerov2.obj
+[stonefish_simulator-1] [INFO] Loaded mesh with 78450 faces in 114 ms.
+[stonefish_simulator-1] [INFO] Loading geometry from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/robots/bluerov2/meshes/bluerov2_phy.obj
+[stonefish_simulator-1] [INFO] Loaded mesh with 2888 faces in 1 ms.
+[stonefish_simulator-1] [INFO] Loading geometry from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/robots/bluerov2/meshes/bluerov2_wings.obj
+[stonefish_simulator-1] [INFO] Loaded mesh with 85380 faces in 50 ms.
+[stonefish_simulator-1] [INFO] Loading geometry from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/robots/bluerov2/meshes/bluerov2_ring.obj
+[stonefish_simulator-1] [INFO] Loaded mesh with 324 faces in 0 ms.
+[stonefish_simulator-1] [INFO] Built multibody link bluerov2/base_link (mass[kg]: 20.189; inertia[kgm2]: 0.179, 0.686, 1.047; volume[cm3]: 20300.0)
+[position_controller_node-3] [INFO] [1791960117.211042348] [bluerov2.position_controller_4dof]: [PID 4DOF] pose_cur=[-5.00, -0.00, 2.50] | pose_des=[-5.00, 0.00, 2.50] | e=[0.000, 0.000, 0.000, 0.0°]
+[position_controller_node-3] [INFO] [1791960117.211216762] [bluerov2.position_controller_4dof]: [WRENCH] F=[0.1, 0.0, 0.2] | M=[0.0, 0.0, 0.0] | Sat: False
+[stonefish_simulator-1] [INFO] [1791960117.223397862] [stonefish_ros2.stonefish_simulator]: Ocean current 0 enabled with velocity [0.000000, 0.100000, 0.000000] m/s.
+[mission-4] [INFO] [1791960117.303296123] [inspection_mission]: CURRENT={"success": true, "message": "Ocean current 0 enabled with velocity [0.000000, 0.100000, 0.000000] m/s."}
+[mission-4] [INFO] [1791960117.403604051] [inspection_mission]: PHASE=TRANSIT_AVOID_OBSTACLES pose=[-5.001596184352424, 0.00038358040614342923, 2.49720380695527]
+[mission-4] [INFO] [1791960117.504235580] [inspection_mission]: TRANSIT_AVOID_OBSTACLES: xyz=[-5.    0.    2.49] clearance=2.03m panel=0.00m hold=0.0s
+[thruster_allocator-2] [WARN] [1791960117.513530559] [bluerov2.thruster_allocator]: Thruster demand exceeds T_max=20.68 N - wrench scaled by 0.53
+[thruster_allocator-2] [WARN] [1791960118.531313999] [bluerov2.thruster_allocator]: Thruster demand exceeds T_max=20.68 N - wrench scaled by 0.58
+[position_controller_node-3] [INFO] [1791960119.211268373] [bluerov2.position_controller_4dof]: [PID 4DOF] pose_cur=[-4.59, 0.42, 2.34] | pose_des=[-1.75, 1.75, 2.50] | e=[2.756, 1.495, -0.121, 3.4°]
+[position_controller_node-3] [INFO] [1791960119.211506289] [bluerov2.position_controller_4dof]: [WRENCH] F=[39.3, 36.3, 0.1] | M=[0.0, 0.0, 0.2] | Sat: False
+[thruster_allocator-2] [WARN] [1791960119.531498425] [bluerov2.thruster_allocator]: Thruster demand exceeds T_max=20.68 N - wrench scaled by 0.93
+[mission-4] [INFO] [1791960119.603708700] [inspection_mission]: TRANSIT_AVOID_OBSTACLES: xyz=[-4.4   0.62  2.29] clearance=2.01m panel=0.00m hold=0.0s
+[stonefish_simulator-1] [INFO] Building kinematic tree of robot 'bluerov2', consisting of 1 links and 0 joints.
+[stonefish_simulator-1] [INFO] Loading geometry from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/robots/bluerov2/meshes/ccw.obj
+[stonefish_simulator-1] [INFO] Loaded mesh with 6359 faces in 2 ms.
+[stonefish_simulator-1] [INFO] Loading geometry from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/robots/bluerov2/meshes/ccw.obj
+[stonefish_simulator-1] [INFO] Loaded mesh with 6359 faces in 2 ms.
+[stonefish_simulator-1] [INFO] Loading geometry from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/robots/bluerov2/meshes/cw.obj
+[stonefish_simulator-1] [INFO] Loaded mesh with 6135 faces in 2 ms.
+[stonefish_simulator-1] [INFO] Loading geometry from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/robots/bluerov2/meshes/cw.obj
+[stonefish_simulator-1] [INFO] Loaded mesh with 6135 faces in 2 ms.
+[stonefish_simulator-1] [INFO] Loading geometry from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/robots/bluerov2/meshes/ccw.obj
+[stonefish_simulator-1] [INFO] Loaded mesh with 6359 faces in 2 ms.
+[stonefish_simulator-1] [INFO] Loading geometry from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/robots/bluerov2/meshes/cw.obj
+[stonefish_simulator-1] [INFO] Loaded mesh with 6135 faces in 2 ms.
+[stonefish_simulator-1] [INFO] Loading geometry from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/robots/bluerov2/meshes/cw.obj
+[stonefish_simulator-1] [INFO] Loaded mesh with 6135 faces in 2 ms.
+[stonefish_simulator-1] [INFO] Loading geometry from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/robots/bluerov2/meshes/ccw.obj
+[stonefish_simulator-1] [INFO] Loaded mesh with 6359 faces in 2 ms.
+[stonefish_simulator-1] [INFO] Scenario parser: Log saved to file '/home/robot/.ros/log/stonefish_ros2_parser.log'.
+[stonefish_simulator-1] [INFO] Finalizing OpenGL rendering pipeline...
+[stonefish_simulator-1] [INFO] Synchronizing motion states...
+[stonefish_simulator-1] [INFO] Simulation initialized -> using Bullet Physics 3.17.
+[stonefish_simulator-1] [INFO] Ready for running...
+[stonefish_simulator-1] [INFO] IC problem solved with 1 iterations in 0.000106 s.
+[position_controller_node-3] [INFO] [1791960121.214596517] [bluerov2.position_controller_4dof]: [WRENCH] F=[15.0, -2.7, 13.0] | M=[0.0, 0.0, 0.0] | Sat: False
+[position_controller_node-3] [INFO] [1791960121.231147063] [bluerov2.position_controller_4dof]: [PID 4DOF] pose_cur=[-3.50, 1.41, 2.22] | pose_des=[-1.75, 1.75, 2.50] | e=[1.759, 0.323, 0.272, -0.6°]
+[mission-4] [INFO] [1791960121.704312426] [inspection_mission]: TRANSIT_AVOID_OBSTACLES: xyz=[-3.27  1.57  2.25] clearance=1.37m panel=0.00m hold=0.0s
+[position_controller_node-3] [INFO] [1791960123.231237094] [bluerov2.position_controller_4dof]: [WRENCH] F=[-1.9, -9.4, 8.7] | M=[0.0, 0.0, -0.1] | Sat: False
+[position_controller_node-3] [INFO] [1791960123.251063229] [bluerov2.position_controller_4dof]: [PID 4DOF] pose_cur=[-2.67, 1.83, 2.37] | pose_des=[-1.75, 1.75, 2.50] | e=[0.917, -0.110, 0.154, -1.5°]
+[mission-4] [INFO] [1791960123.804064774] [inspection_mission]: TRANSIT_AVOID_OBSTACLES: xyz=[-2.53  1.85  2.41] clearance=1.07m panel=0.00m hold=0.0s
+[position_controller_node-3] [INFO] [1791960125.231383132] [bluerov2.position_controller_4dof]: [WRENCH] F=[-4.2, -1.5, 5.4] | M=[0.0, 0.0, -0.0] | Sat: False
+[position_controller_node-3] [INFO] [1791960125.251418684] [bluerov2.position_controller_4dof]: [PID 4DOF] pose_cur=[-2.29, 1.77, 2.50] | pose_des=[-1.75, 1.75, 2.50] | e=[0.536, -0.026, 0.019, -0.4°]
+[mission-4] [INFO] [1791960125.903666184] [inspection_mission]: TRANSIT_AVOID_OBSTACLES: xyz=[-2.24  1.73  2.51] clearance=0.82m panel=0.00m hold=0.0s
+[position_controller_node-3] [INFO] [1791960127.231621332] [bluerov2.position_controller_4dof]: [WRENCH] F=[0.1, 0.5, 6.7] | M=[0.0, 0.0, 0.0] | Sat: False
+[position_controller_node-3] [INFO] [1791960127.251820364] [bluerov2.position_controller_4dof]: [PID 4DOF] pose_cur=[-2.20, 1.68, 2.51] | pose_des=[-1.75, 1.75, 2.50] | e=[0.450, 0.065, -0.002, 0.0°]
+[mission-4] [INFO] [1791960128.003511642] [inspection_mission]: TRANSIT_AVOID_OBSTACLES: xyz=[-2.19  1.68  2.5 ] clearance=0.75m panel=0.00m hold=0.0s
+[position_controller_node-3] [INFO] [1791960129.231711846] [bluerov2.position_controller_4dof]: [WRENCH] F=[1.3, -0.9, 7.6] | M=[0.0, 0.0, -0.0] | Sat: False
+[position_controller_node-3] [INFO] [1791960129.271123548] [bluerov2.position_controller_4dof]: [PID 4DOF] pose_cur=[-2.15, 1.70, 2.49] | pose_des=[-1.75, 1.75, 2.50] | e=[0.400, 0.045, 0.017, -0.1°]
+[mission-4] [INFO] [1791960130.003684703] [inspection_mission]: TRANSIT_AVOID_OBSTACLES: xyz=[-2.12  1.72  2.48] clearance=0.75m panel=0.00m hold=0.0s
+[position_controller_node-3] [INFO] [1791960131.252594663] [bluerov2.position_controller_4dof]: [WRENCH] F=[-0.0, -1.4, 7.4] | M=[0.0, 0.0, -0.0] | Sat: False
+[position_controller_node-3] [INFO] [1791960131.271211776] [bluerov2.position_controller_4dof]: [PID 4DOF] pose_cur=[-2.05, 1.73, 2.49] | pose_des=[-1.75, 1.75, 2.50] | e=[0.303, 0.018, 0.016, -0.2°]
+[mission-4] [INFO] [1791960132.106065172] [inspection_mission]: TRANSIT_AVOID_OBSTACLES: xyz=[-2.01  1.74  2.49] clearance=0.73m panel=0.00m hold=0.0s
+[position_controller_node-3] [INFO] [1791960133.271202236] [bluerov2.position_controller_4dof]: [WRENCH] F=[41.8, -1.2, -4.9] | M=[0.0, 0.0, 0.0] | Sat: False
+[position_controller_node-3] [INFO] [1791960133.290946962] [bluerov2.position_controller_4dof]: [PID 4DOF] pose_cur=[-1.85, 1.73, 2.50] | pose_des=[-0.50, 1.75, 2.50] | e=[1.324, 0.013, -0.241, -0.1°]
+[mission-4] [INFO] [1791960134.203659910] [inspection_mission]: TRANSIT_AVOID_OBSTACLES: xyz=[-1.39  1.74  2.49] clearance=0.59m panel=0.00m hold=0.0s
+[position_controller_node-3] [INFO] [1791960135.271334209] [bluerov2.position_controller_4dof]: [WRENCH] F=[0.8, -3.3, 8.1] | M=[0.0, 0.0, -0.0] | Sat: False
+[position_controller_node-3] [INFO] [1791960135.291168445] [bluerov2.position_controller_4dof]: [PID 4DOF] pose_cur=[-0.84, 1.76, 2.47] | pose_des=[-0.50, 1.75, 2.50] | e=[0.334, -0.015, 0.042, -0.0°]
+[thruster_allocator-2] [WARN] [1791960135.712039106] [bluerov2.thruster_allocator]: Thruster demand exceeds T_max=20.68 N - wrench scaled by 0.59
+[mission-4] [INFO] [1791960136.205214521] [inspection_mission]: TRANSIT_AVOID_OBSTACLES: xyz=[-0.45  1.75  2.46] clearance=0.69m panel=0.00m hold=0.0s
+[thruster_allocator-2] [WARN] [1791960136.714372276] [bluerov2.thruster_allocator]: Thruster demand exceeds T_max=20.68 N - wrench scaled by 0.85
+[position_controller_node-3] [INFO] [1791960137.291324050] [bluerov2.position_controller_4dof]: [WRENCH] F=[18.2, -27.8, 7.7] | M=[0.0, 0.0, -0.0] | Sat: False
+[position_controller_node-3] [INFO] [1791960137.311222716] [bluerov2.position_controller_4dof]: [PID 4DOF] pose_cur=[0.12, 1.47, 2.44] | pose_des=[0.75, 0.75, 2.50] | e=[0.610, -0.734, -0.003, -1.3°]
+[mission-4] [INFO] [1791960138.206143851] [inspection_mission]: TRANSIT_AVOID_OBSTACLES: xyz=[0.58 1.11 2.44] clearance=0.50m panel=0.00m hold=0.0s
+[thruster_allocator-2] [WARN] [1791960138.714647208] [bluerov2.thruster_allocator]: Thruster demand exceeds T_max=20.68 N - wrench scaled by 0.61
+[position_controller_node-3] [INFO] [1791960139.312545521] [bluerov2.position_controller_4dof]: [PID 4DOF] pose_cur=[1.01, 0.72, 2.46] | pose_des=[2.50, 0.00, 2.50] | e=[1.489, -0.704, -0.161, 0.2°]
+[position_controller_node-3] [INFO] [1791960139.312779957] [bluerov2.position_controller_4dof]: [WRENCH] F=[46.2, -32.6, 0.0] | M=[0.0, 0.0, -0.1] | Sat: False
+[thruster_allocator-2] [WARN] [1791960139.731475827] [bluerov2.thruster_allocator]: Thruster demand exceeds T_max=20.68 N - wrench scaled by 0.92
+[mission-4] [INFO] [1791960140.303679234] [inspection_mission]: TRANSIT_AVOID_OBSTACLES: xyz=[1.53 0.34 2.45] clearance=1.27m panel=0.00m hold=0.0s
+[position_controller_node-3] [INFO] [1791960141.331116162] [bluerov2.position_controller_4dof]: [PID 4DOF] pose_cur=[2.09, -0.03, 2.45] | pose_des=[2.50, 0.00, 2.50] | e=[0.405, 0.033, 0.050, 0.9°]
+[position_controller_node-3] [INFO] [1791960141.331281765] [bluerov2.position_controller_4dof]: [WRENCH] F=[5.3, -4.7, 7.9] | M=[0.0, 0.0, 0.0] | Sat: False
+[mission-4] [INFO] [1791960141.903703651] [inspection_mission]: PHASE=SEARCH_PANEL pose=[2.3494812223683392, -0.18190185407640486, 2.461070228312894]
+[mission-4] [INFO] [1791960142.303764415] [inspection_mission]: SEARCH_PANEL: xyz=[ 2.49 -0.27  2.47] clearance=2.20m panel=0.00m hold=0.0s
+[position_controller_node-3] [INFO] [1791960143.351428020] [bluerov2.position_controller_4dof]: [PID 4DOF] pose_cur=[2.73, -0.40, 2.47] | pose_des=[2.50, 0.00, 2.50] | e=[-0.237, 0.399, 0.007, 0.7°]
+[position_controller_node-3] [INFO] [1791960143.351603607] [bluerov2.position_controller_4dof]: [WRENCH] F=[-9.5, 4.8, 6.3] | M=[0.0, 0.0, 0.0] | Sat: False
+[mission-4] [INFO] [1791960144.403642373] [inspection_mission]: SEARCH_PANEL: xyz=[ 2.78 -0.41  2.48] clearance=2.47m panel=0.00m hold=0.0s
+[position_controller_node-3] [INFO] [1791960145.371030308] [bluerov2.position_controller_4dof]: [PID 4DOF] pose_cur=[2.72, -0.35, 2.48] | pose_des=[2.50, 0.00, 2.50] | e=[-0.222, 0.352, 0.015, 0.0°]
+[position_controller_node-3] [INFO] [1791960145.371224994] [bluerov2.position_controller_4dof]: [WRENCH] F=[-2.8, 1.0, 7.5] | M=[0.0, 0.0, 0.0] | Sat: False
+[mission-4] [INFO] [1791960146.403679648] [inspection_mission]: SEARCH_PANEL: xyz=[ 2.62 -0.27  2.48] clearance=2.26m panel=0.00m hold=0.0s
+[position_controller_node-3] [INFO] [1791960147.372142053] [bluerov2.position_controller_4dof]: [PID 4DOF] pose_cur=[2.55, -0.20, 2.49] | pose_des=[2.50, 0.00, 2.50] | e=[-0.045, 0.196, 0.010, -0.4°]
+[position_controller_node-3] [INFO] [1791960147.372321006] [bluerov2.position_controller_4dof]: [WRENCH] F=[2.6, -2.5, 7.2] | M=[0.0, 0.0, -0.0] | Sat: False
+[mission-4] [INFO] [1791960148.403789120] [inspection_mission]: SEARCH_PANEL: xyz=[ 2.51 -0.15  2.5 ] clearance=2.10m panel=0.00m hold=0.0s
+[position_controller_node-3] [INFO] [1791960149.391209501] [bluerov2.position_controller_4dof]: [PID 4DOF] pose_cur=[2.52, -0.13, 2.50] | pose_des=[2.50, 0.00, 2.50] | e=[-0.015, 0.135, 0.002, -0.2°]
+[position_controller_node-3] [INFO] [1791960149.391440821] [bluerov2.position_controller_4dof]: [WRENCH] F=[1.0, -1.7, 7.2] | M=[0.0, 0.0, -0.0] | Sat: False
+[mission-4] [INFO] [1791960150.404093231] [inspection_mission]: SEARCH_PANEL: xyz=[ 2.54 -0.13  2.5 ] clearance=2.09m panel=0.00m hold=0.0s
+[position_controller_node-3] [INFO] [1791960151.391208838] [bluerov2.position_controller_4dof]: [PID 4DOF] pose_cur=[2.55, -0.12, 2.50] | pose_des=[2.50, 0.00, 2.50] | e=[-0.052, 0.125, 0.001, -0.1°]
+[position_controller_node-3] [INFO] [1791960151.411192430] [bluerov2.position_controller_4dof]: [WRENCH] F=[-0.9, -0.7, 7.2] | M=[0.0, 0.0, 0.0] | Sat: False
+[mission-4] [INFO] [1791960152.504087826] [inspection_mission]: SEARCH_PANEL: xyz=[ 2.56 -0.12  2.5 ] clearance=2.09m panel=0.00m hold=0.0s
+[position_controller_node-3] [INFO] [1791960153.391357052] [bluerov2.position_controller_4dof]: [PID 4DOF] pose_cur=[2.55, -0.10, 2.50] | pose_des=[2.50, 0.00, 2.50] | e=[-0.051, 0.104, 0.002, -0.0°]
+[position_controller_node-3] [INFO] [1791960153.411206326] [bluerov2.position_controller_4dof]: [WRENCH] F=[-0.5, -0.8, 7.3] | M=[0.0, 0.0, 0.0] | Sat: False
+[mission-4] [INFO] [1791960154.603698582] [inspection_mission]: SEARCH_PANEL: xyz=[ 2.54 -0.09  2.5 ] clearance=2.06m panel=0.00m hold=0.0s
+[position_controller_node-3] [INFO] [1791960155.411057282] [bluerov2.position_controller_4dof]: [PID 4DOF] pose_cur=[2.53, -0.07, 2.50] | pose_des=[2.50, 0.00, 2.50] | e=[-0.027, 0.075, 0.001, -0.0°]
+[position_controller_node-3] [INFO] [1791960155.412229222] [bluerov2.position_controller_4dof]: [WRENCH] F=[0.1, -1.2, 7.3] | M=[0.0, 0.0, -0.0] | Sat: False
+[mission-4] [INFO] [1791960156.609805457] [inspection_mission]: SEARCH_PANEL: xyz=[ 2.52 -0.06  2.5 ] clearance=2.03m panel=0.00m hold=0.0s
+[mission-4] [INFO] [1791960156.903758693] [inspection_mission]: PHASE=FAILED pose=[2.5176804415677476, -0.05921467916691515, 2.4991658457868398]
+[mission-4] [INFO] [1791960156.904592116] [inspection_mission]: RESULT={"success": false, "reason": "Panel not detected at the inspection gate", "duration_wall_seconds": 39.50027871131897, "clock_source": "ROS system clock matching upstream sensor stamps; upstream has no /clock publisher", "state_source": "Stonefish ground-truth odometry baseline", "planner": "known-site inflated A* at fixed depth", "perception": "RGB yellow-panel geometric marker detector; no learned model", "current": {"success": true, "message": "Ocean current 0 enabled with velocity [0.000000, 0.100000, 0.000000] m/s."}, "current_velocity_ned": [0.0, 0.1, 0.0], "minimum_obstacle_clearance_m": 0.39895493324440146, "contact_bodies": [], "detected_camera_frames": 0, "inspection_required_seconds": 8.0, "inspection_completed_seconds": 0.0, "home_error_m": 7.517913693011669, "inspection_range_rmse_m": null, "events": [{"ros_wall_time": 1791960117.403198, "phase": "TRANSIT_AVOID_OBSTACLES", "pose": [-5.001596184352424, 0.00038358040614342923, 2.49720380695527]}, {"ros_wall_time": 1791960141.90305, "phase": "SEARCH_PANEL", "pose": [2.3494812223683392, -0.18190185407640486, 2.461070228312894]}, {"ros_wall_time": 1791960156.9033208, "phase": "FAILED", "pose": [2.5176804415677476, -0.05921467916691515, 2.4991658457868398]}]}
+[position_controller_node-3] [INFO] [1791960157.411363608] [bluerov2.position_controller_4dof]: [PID 4DOF] pose_cur=[2.52, -0.06, 2.50] | pose_des=[2.52, -0.06, 2.50] | e=[0.000, -0.001, -0.000, -0.1°]
+[position_controller_node-3] [INFO] [1791960157.431321246] [bluerov2.position_controller_4dof]: [WRENCH] F=[0.7, -3.4, 7.2] | M=[0.0, 0.0, -0.0] | Sat: False
+[mission-4] [INFO] [1791960158.703703126] [inspection_mission]: FAILED: xyz=[ 2.53 -0.08  2.5 ] clearance=2.05m panel=0.00m hold=0.0s
+[position_controller_node-3] [INFO] [1791960159.431384818] [bluerov2.position_controller_4dof]: [PID 4DOF] pose_cur=[2.53, -0.10, 2.50] | pose_des=[2.52, -0.06, 2.50] | e=[-0.015, 0.036, 0.000, 0.0°]
+[position_controller_node-3] [INFO] [1791960159.431621820] [bluerov2.position_controller_4dof]: [WRENCH] F=[-0.3, -0.8, 7.2] | M=[0.0, 0.0, 0.0] | Sat: False
+[mission-4] [INFO] [1791960160.705149754] [inspection_mission]: FAILED: xyz=[ 2.54 -0.11  2.5 ] clearance=2.08m panel=0.00m hold=0.0s
+[position_controller_node-3] [INFO] [1791960161.453820396] [bluerov2.position_controller_4dof]: [PID 4DOF] pose_cur=[2.54, -0.11, 2.50] | pose_des=[2.52, -0.06, 2.50] | e=[-0.023, 0.055, 0.001, 0.1°]
+[position_controller_node-3] [INFO] [1791960161.454010067] [bluerov2.position_controller_4dof]: [WRENCH] F=[-0.4, -0.5, 7.3] | M=[0.0, 0.0, 0.0] | Sat: False
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[INFO] [viewer-5]: sending signal 'SIGINT' to process[viewer-5]
+[INFO] [mission-4]: sending signal 'SIGINT' to process[mission-4]
+[INFO] [position_controller_node-3]: sending signal 'SIGINT' to process[position_controller_node-3]
+[INFO] [thruster_allocator-2]: sending signal 'SIGINT' to process[thruster_allocator-2]
+[INFO] [stonefish_simulator-1]: sending signal 'SIGINT' to process[stonefish_simulator-1]
+[INFO] [thruster_allocator-2]: process has finished cleanly [pid 1976755]
+[INFO] [viewer-5]: process has finished cleanly [pid 1976761]
+[INFO] [position_controller_node-3]: process has finished cleanly [pid 1976757]
+[INFO] [mission-4]: process has finished cleanly [pid 1976759]
+[INFO] [stonefish_simulator-1]: process has finished cleanly [pid 1976753]

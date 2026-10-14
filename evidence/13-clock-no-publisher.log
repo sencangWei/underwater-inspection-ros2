@@ -1,0 +1,48 @@
+Type: rosgraph_msgs/msg/Clock
+
+Publisher count: 0
+
+Subscription count: 3
+
+Node name: thruster_allocator
+Node namespace: /bluerov2
+Topic type: rosgraph_msgs/msg/Clock
+Endpoint type: SUBSCRIPTION
+GID: 01.0f.01.44.e9.08.52.18.00.00.00.00.00.00.05.04.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: BEST_EFFORT
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Node name: position_controller_4dof
+Node namespace: /bluerov2
+Topic type: rosgraph_msgs/msg/Clock
+Endpoint type: SUBSCRIPTION
+GID: 01.0f.01.44.eb.08.33.0c.00.00.00.00.00.00.05.04.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: BEST_EFFORT
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Node name: inspection_mission
+Node namespace: /
+Topic type: rosgraph_msgs/msg/Clock
+Endpoint type: SUBSCRIPTION
+GID: 01.0f.01.44.ed.08.e0.d8.00.00.00.00.00.00.05.04.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: BEST_EFFORT
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+

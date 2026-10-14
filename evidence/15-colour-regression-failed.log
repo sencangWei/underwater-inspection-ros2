@@ -1,0 +1,15 @@
+...F                                                                     [100%]
+=================================== FAILURES ===================================
+_____ test_actual_underwater_camera_panel_survives_absorption_colour_shift _____
+
+    def test_actual_underwater_camera_panel_survives_absorption_colour_shift():
+        # Actual run04 image: yellow material becomes green after red absorption.
+        image = cv2.imread(str(Path(__file__).parent / 'data/panel_underwater.png'))
+        panel = detect_panel(image, 417, 1.0)
+>       assert panel is not None
+E       assert None is not None
+
+src/underwater_inspection/test/test_baseline.py:47: AssertionError
+=========================== short test summary info ============================
+FAILED src/underwater_inspection/test/test_baseline.py::test_actual_underwater_camera_panel_survives_absorption_colour_shift
+1 failed, 3 passed in 0.19s

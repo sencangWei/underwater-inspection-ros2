@@ -1,0 +1,63 @@
+{
+  "success": false,
+  "reason": "Panel lost during visual servo",
+  "duration_wall_seconds": 54.69999384880066,
+  "clock_source": "ROS system clock matching upstream sensor stamps; upstream has no /clock publisher",
+  "state_source": "Stonefish ground-truth odometry baseline",
+  "planner": "known-site inflated A* at fixed depth",
+  "perception": "RGB yellow-panel geometric marker detector; no learned model",
+  "current": {
+    "success": true,
+    "message": "Ocean current 0 enabled with velocity [0.000000, 0.100000, 0.000000] m/s."
+  },
+  "current_velocity_ned": [
+    0.0,
+    0.1,
+    0.0
+  ],
+  "minimum_obstacle_clearance_m": 0.3972661135180803,
+  "contact_bodies": [],
+  "detected_camera_frames": 207,
+  "inspection_required_seconds": 8.0,
+  "inspection_completed_seconds": 0.0,
+  "home_error_m": 10.123398863639412,
+  "inspection_range_rmse_m": null,
+  "events": [
+    {
+      "ros_wall_time": 1791960298.1314225,
+      "phase": "TRANSIT_AVOID_OBSTACLES",
+      "pose": [
+        -5.001816912586036,
+        0.00038546837135834233,
+        2.4966977754462074
+      ]
+    },
+    {
+      "ros_wall_time": 1791960322.6312802,
+      "phase": "SEARCH_PANEL",
+      "pose": [
+        2.341513368699603,
+        -0.17926364438139103,
+        2.460200028212404
+      ]
+    },
+    {
+      "ros_wall_time": 1791960322.7313187,
+      "phase": "VISUAL_APPROACH",
+      "pose": [
+        2.381563472586527,
+        -0.20344558148394243,
+        2.4613541575669386
+      ]
+    },
+    {
+      "ros_wall_time": 1791960352.8313186,
+      "phase": "FAILED",
+      "pose": [
+        5.029226342998647,
+        -1.3774099146977377,
+        2.476221014948415
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "command": [
+    "ros2",
+    "launch",
+    "underwater_inspection",
+    "inspection.launch.py"
+  ],
+  "ros_domain_id": "73",
+  "source_sha256": {
+    "src/underwater_inspection/setup.py": "048e676bf6bb27cf33424a1f7b4c604c6ad7ce68a5063e6a6b0088b6ee169d14",
+    "src/underwater_inspection/scenarios/inspection.scn": "8130b2537d6f2f783c7d1694f8e99fab5eafd262efecd54dad1fbd2cdf84c678",
+    "src/underwater_inspection/scenarios/robot.scn": "a728763497452eabc66cb0dd8bb0cb22b5f52c5c879e85a6ed5b09fee67ee625",
+    "src/underwater_inspection/launch/inspection.launch.py": "fa9410ddd5d80fb848aa65aa5961d9556bd86153bb37f24cf9bd94a50696e23a",
+    "src/underwater_inspection/config/mission.yaml": "2023eb4a9b8253780130099914edf292eaa4dabf5930ed3f9f0fa99d2829d7c7",
+    "src/underwater_inspection/underwater_inspection/mission.py": "c34e32a411ca13eb1e97b5794062882d2b3b668d066c68c914b815ee42c9c9c3",
+    "src/underwater_inspection/underwater_inspection/perception.py": "8815143c2d292b0faba7017db30219095d88fab3c0f0c5ddf8ccfc78682881de",
+    "src/underwater_inspection/underwater_inspection/planning.py": "244257b798a0148c297e780ba5629396cfd7b0693e7f18aabf150e0d00a8ed5f",
+    "src/underwater_inspection/underwater_inspection/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/underwater_inspection/underwater_inspection/viewer.py": "b54dc1673f447d269b2dcf516cfe46a7394aa40da1582a0a7a3dff1796dc81c1",
+    "src/underwater_inspection/test/test_control_guards.py": "746e30f5f398e5cf7679edc338455bd49aa0d813defae5131c1e79d0e49b020c",
+    "src/underwater_inspection/test/test_baseline.py": "d994de49b42803c56efbe5ad6e9fdb526dba3d574fe0b99f4746626280e1fdb0"
+  },
+  "git_commit": "204db66a7a58ccb8418daed391871b341ca3663c"
+}

@@ -1,0 +1,221 @@
+[INFO] [launch]: All log files can be found below /home/robot/.ros/log/2026-10-14-14-51-07-423918-robot-MS-7E19-1990455
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [stonefish_simulator-1]: process started with pid [1990457]
+[INFO] [thruster_allocator-2]: process started with pid [1990459]
+[INFO] [hybrid_controller_node-3]: process started with pid [1990461]
+[INFO] [mission-4]: process started with pid [1990463]
+[INFO] [viewer-5]: process started with pid [1990465]
+[thruster_allocator-2] [INFO] [1791960667.612751835] [bluerov2.thruster_allocator]: Loading TAM from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/robots/bluerov2/config/TAM.yaml
+[thruster_allocator-2] [INFO] [1791960667.615006673] [bluerov2.thruster_allocator]: TAM loaded successfully: 8 thrusters
+[thruster_allocator-2] [INFO] [1791960667.616650306] [bluerov2.thruster_allocator]: Thruster allocator initialized for bluerov2
+[thruster_allocator-2] [INFO] [1791960667.616794531] [bluerov2.thruster_allocator]: Output topic: /bluerov2/setpoint/pwm
+[thruster_allocator-2] [INFO] [1791960667.616928395] [bluerov2.thruster_allocator]: Update rate: 50.0 Hz
+[thruster_allocator-2] [INFO] [1791960667.617057455] [bluerov2.thruster_allocator]: Timeout: 1.0 s
+[hybrid_controller_node-3] [INFO] [1791960667.636042776] [bluerov2.hybrid_controller]: ============================================================
+[hybrid_controller_node-3] [INFO] [1791960667.636240011] [bluerov2.hybrid_controller]: Dynamics Loaded (4DOF)
+[hybrid_controller_node-3] [INFO] [1791960667.636365331] [bluerov2.hybrid_controller]: ============================================================
+[hybrid_controller_node-3] [INFO] [1791960667.636491156] [bluerov2.hybrid_controller]: Mass: 20.13 kg
+[hybrid_controller_node-3] [INFO] [1791960667.636616986] [bluerov2.hybrid_controller]: Inertia (Yaw): 0.1300 kg·m²
+[hybrid_controller_node-3] [INFO] [1791960667.636768648] [bluerov2.hybrid_controller]: COG: [0.0000, 0.0000, 0.1730] m
+[hybrid_controller_node-3] [INFO] [1791960667.636891384] [bluerov2.hybrid_controller]: COB: [0.0000, 0.0000, -0.1000] m
+[hybrid_controller_node-3] [INFO] [1791960667.637009994] [bluerov2.hybrid_controller]: Volume: 0.019582 m³
+[hybrid_controller_node-3] [INFO] [1791960667.637130200] [bluerov2.hybrid_controller]: ------------------------------------------------------------
+[hybrid_controller_node-3] [INFO] [1791960667.637251319] [bluerov2.hybrid_controller]: Metacentric Height (GM): -0.2730 m
+[hybrid_controller_node-3] [INFO] [1791960667.637373638] [bluerov2.hybrid_controller]: Buoyancy: 197.68 N
+[hybrid_controller_node-3] [INFO] [1791960667.637494494] [bluerov2.hybrid_controller]: Weight: 197.69 N
+[hybrid_controller_node-3] [INFO] [1791960667.637615474] [bluerov2.hybrid_controller]: Net Force: -0.01 N
+[hybrid_controller_node-3] [INFO] [1791960667.637732649] [bluerov2.hybrid_controller]: Restoring Coeff: 0.0019 Nm/rad
+[hybrid_controller_node-3] [INFO] [1791960667.637852571] [bluerov2.hybrid_controller]: ✓ PASSIVE STABILITY OK (|GM| >= 0.15m)
+[hybrid_controller_node-3] [INFO] [1791960667.637969272] [bluerov2.hybrid_controller]: ============================================================
+[hybrid_controller_node-3] [INFO] [1791960667.643000532] [bluerov2.hybrid_controller]: Hybrid Controller initialized (mode: position)
+[mission-4] [INFO] [1791960667.788259696] [inspection_mission]: Known-map A* transit + RGB visual servo + PID hold; simulator odometry baseline.
+[stonefish_simulator-1] [INFO] Welcome to Stonefish 1.3.
+[stonefish_simulator-1] [INFO] Window created. OpenGL 4.3 contexts created.
+[stonefish_simulator-1] [INFO] Checking GPU capabilities...
+[stonefish_simulator-1] [INFO] Number of texture units available: 192
+[stonefish_simulator-1] [INFO] Maximum texture size: 32768
+[stonefish_simulator-1] [INFO] Maximum number of texture layers: 2048
+[stonefish_simulator-1] [INFO] Maximum number of fragment shader uniforms: 4096
+[stonefish_simulator-1] [INFO] Setting up OpenGL...
+[stonefish_simulator-1] [INFO] Loaded texture from: /home/robot/桌面/机器人仿真/underwater-inspection-ros2/.local/stonefish/share/Stonefish/shaders/logo_64.png
+[stonefish_simulator-1] [INFO] Initializing rendering pipeline:
+[stonefish_simulator-1] [INFO] Loading GUI...
+[stonefish_simulator-1] [INFO] Loaded texture from: /home/robot/桌面/机器人仿真/underwater-inspection-ros2/.local/stonefish/share/Stonefish/shaders/logo_gray_64.png
+[stonefish_simulator-1] [INFO] Loaded texture from: /home/robot/桌面/机器人仿真/underwater-inspection-ros2/.local/stonefish/share/Stonefish/shaders/gui.png
+[stonefish_simulator-1] [INFO] Initialising OpenGL rendering pipeline...
+[stonefish_simulator-1] [INFO] Loading shaders...
+[stonefish_simulator-1] [INFO] Loaded texture from: /home/robot/桌面/机器人仿真/underwater-inspection-ros2/.local/stonefish/share/Stonefish/shaders/flake.png
+[stonefish_simulator-1] [INFO] Initializing simulation:
+[stonefish_simulator-1] [INFO] Building scenario...
+[stonefish_simulator-1] [INFO] Loaded precomputed atmosphere model (20 wavelengths, 5 scattering orders)
+[stonefish_simulator-1] [INFO] Scenario parser: Loading scenario from '/home/robot/underwater-inspection-ros2/install/share/underwater_inspection/scenarios/inspection.scn'.
+[stonefish_simulator-1] [INFO] Scenario parser: Including file '/home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/worlds/common/visual.scn'
+[stonefish_simulator-1] [INFO] Scenario parser: Including file '/home/robot/underwater-inspection-ros2/install/share/underwater_inspection/scenarios/robot.scn'
+[stonefish_simulator-1] [INFO] Generating ocean waves...
+[stonefish_simulator-1] [INFO] Material Neutral (0) created.
+[stonefish_simulator-1] [INFO] Material Rock (1) created.
+[stonefish_simulator-1] [INFO] Material Fiberglass (2) created.
+[stonefish_simulator-1] [INFO] Material Aluminium (3) created.
+[stonefish_simulator-1] [INFO] Material Sand (4) created.
+[stonefish_simulator-1] [INFO] Material Seabed (5) created.
+[stonefish_simulator-1] [INFO] Material Concrete (6) created.
+[stonefish_simulator-1] [INFO] Material Steel (7) created.
+[stonefish_simulator-1] [INFO] Loaded texture from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/worlds/meshes/SoilBeach0078_1_350.jpg
+[stonefish_simulator-1] [INFO] Loaded texture from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/models/gas_canister/meshes/gas_canister.png
+[stonefish_simulator-1] [INFO] Loaded texture from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/models/gas_tank/meshes/gas_tank.png
+[stonefish_simulator-1] [INFO] Loaded texture from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/models/oil_drum/meshes/oil_drum.png
+[stonefish_simulator-1] [INFO] Loaded texture from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/models/rust_pipe/meshes/rust_pipe.png
+[stonefish_simulator-1] [INFO] Loaded texture from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/models/turbines/textures/Turbine_Base_Diffuse.png
+[stonefish_simulator-1] [INFO] Loaded texture from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/models/turbines/textures/Turbine_Main_Diffuse.png
+[stonefish_simulator-1] [INFO] Loaded texture from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/robots/bluerov2/meshes/br2.png
+[stonefish_simulator-1] [INFO] Loading geometry from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/robots/bluerov2/meshes/bluerov2.obj
+[stonefish_simulator-1] [INFO] Loaded mesh with 78450 faces in 113 ms.
+[stonefish_simulator-1] [INFO] Loading geometry from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/robots/bluerov2/meshes/bluerov2_phy.obj
+[stonefish_simulator-1] [INFO] Loaded mesh with 2888 faces in 1 ms.
+[stonefish_simulator-1] [INFO] Loading geometry from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/robots/bluerov2/meshes/bluerov2_wings.obj
+[stonefish_simulator-1] [INFO] Loaded mesh with 85380 faces in 50 ms.
+[stonefish_simulator-1] [INFO] Loading geometry from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/robots/bluerov2/meshes/bluerov2_ring.obj
+[stonefish_simulator-1] [INFO] Loaded mesh with 324 faces in 0 ms.
+[stonefish_simulator-1] [INFO] Built multibody link bluerov2/base_link (mass[kg]: 20.189; inertia[kgm2]: 0.179, 0.686, 1.047; volume[cm3]: 20300.0)
+[stonefish_simulator-1] [INFO] [1791960669.797171031] [stonefish_ros2.stonefish_simulator]: Ocean current 0 enabled with velocity [0.000000, 0.100000, 0.000000] m/s.
+[mission-4] [INFO] [1791960669.879742896] [inspection_mission]: CURRENT={"success": true, "message": "Ocean current 0 enabled with velocity [0.000000, 0.100000, 0.000000] m/s."}
+[mission-4] [INFO] [1791960669.979985309] [inspection_mission]: PHASE=TRANSIT_AVOID_OBSTACLES pose=[-5.002036094913985, 0.00047993065336175255, 2.4961498290231914]
+[mission-4] [INFO] [1791960670.080126035] [inspection_mission]: TRANSIT_AVOID_OBSTACLES: xyz=[-5.    0.    2.49] clearance=2.03m panel=0.00m hold=0.0s
+[thruster_allocator-2] [WARN] [1791960670.083493002] [bluerov2.thruster_allocator]: Thruster demand exceeds T_max=20.68 N - wrench scaled by 0.53
+[thruster_allocator-2] [WARN] [1791960671.083830675] [bluerov2.thruster_allocator]: Thruster demand exceeds T_max=20.68 N - wrench scaled by 0.57
+[hybrid_controller_node-3] [INFO] [1791960671.643401424] [bluerov2.hybrid_controller]: Mode: position | Switches: 0
+[mission-4] [INFO] [1791960672.080170623] [inspection_mission]: TRANSIT_AVOID_OBSTACLES: xyz=[-4.44  0.57  2.3 ] clearance=2.04m panel=0.00m hold=0.0s
+[thruster_allocator-2] [WARN] [1791960672.103512343] [bluerov2.thruster_allocator]: Thruster demand exceeds T_max=20.68 N - wrench scaled by 0.93
+[stonefish_simulator-1] [INFO] Building kinematic tree of robot 'bluerov2', consisting of 1 links and 0 joints.
+[stonefish_simulator-1] [INFO] Loading geometry from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/robots/bluerov2/meshes/ccw.obj
+[stonefish_simulator-1] [INFO] Loaded mesh with 6359 faces in 2 ms.
+[stonefish_simulator-1] [INFO] Loading geometry from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/robots/bluerov2/meshes/ccw.obj
+[stonefish_simulator-1] [INFO] Loaded mesh with 6359 faces in 2 ms.
+[stonefish_simulator-1] [INFO] Loading geometry from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/robots/bluerov2/meshes/cw.obj
+[stonefish_simulator-1] [INFO] Loaded mesh with 6135 faces in 2 ms.
+[stonefish_simulator-1] [INFO] Loading geometry from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/robots/bluerov2/meshes/cw.obj
+[stonefish_simulator-1] [INFO] Loaded mesh with 6135 faces in 2 ms.
+[stonefish_simulator-1] [INFO] Loading geometry from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/robots/bluerov2/meshes/ccw.obj
+[stonefish_simulator-1] [INFO] Loaded mesh with 6359 faces in 2 ms.
+[stonefish_simulator-1] [INFO] Loading geometry from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/robots/bluerov2/meshes/cw.obj
+[stonefish_simulator-1] [INFO] Loaded mesh with 6135 faces in 2 ms.
+[stonefish_simulator-1] [INFO] Loading geometry from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/robots/bluerov2/meshes/cw.obj
+[stonefish_simulator-1] [INFO] Loaded mesh with 6135 faces in 2 ms.
+[stonefish_simulator-1] [INFO] Loading geometry from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/robots/bluerov2/meshes/ccw.obj
+[stonefish_simulator-1] [INFO] Loaded mesh with 6359 faces in 2 ms.
+[stonefish_simulator-1] [INFO] Scenario parser: Log saved to file '/home/robot/.ros/log/stonefish_ros2_parser.log'.
+[stonefish_simulator-1] [INFO] Finalizing OpenGL rendering pipeline...
+[stonefish_simulator-1] [INFO] Synchronizing motion states...
+[stonefish_simulator-1] [INFO] Simulation initialized -> using Bullet Physics 3.17.
+[stonefish_simulator-1] [INFO] Ready for running...
+[stonefish_simulator-1] [INFO] IC problem solved with 1 iterations in 0.000141 s.
+[hybrid_controller_node-3] [INFO] [1791960673.643388655] [bluerov2.hybrid_controller]: Mode: position | Switches: 0
+[mission-4] [INFO] [1791960674.080410102] [inspection_mission]: TRANSIT_AVOID_OBSTACLES: xyz=[-3.37  1.5   2.24] clearance=1.41m panel=8.34m hold=0.0s
+[hybrid_controller_node-3] [INFO] [1791960675.643436596] [bluerov2.hybrid_controller]: Mode: position | Switches: 0
+[mission-4] [INFO] [1791960676.080763303] [inspection_mission]: TRANSIT_AVOID_OBSTACLES: xyz=[-2.61  1.84  2.39] clearance=1.11m panel=7.58m hold=0.0s
+[hybrid_controller_node-3] [INFO] [1791960677.643314984] [bluerov2.hybrid_controller]: Mode: position | Switches: 0
+[mission-4] [INFO] [1791960678.180016016] [inspection_mission]: TRANSIT_AVOID_OBSTACLES: xyz=[-2.26  1.75  2.5 ] clearance=0.85m panel=7.45m hold=0.0s
+[hybrid_controller_node-3] [INFO] [1791960679.643684970] [bluerov2.hybrid_controller]: Mode: position | Switches: 0
+[mission-4] [INFO] [1791960680.180522584] [inspection_mission]: TRANSIT_AVOID_OBSTACLES: xyz=[-2.19  1.68  2.5 ] clearance=0.76m panel=7.32m hold=0.0s
+[hybrid_controller_node-3] [INFO] [1791960681.643452281] [bluerov2.hybrid_controller]: Mode: position | Switches: 0
+[mission-4] [INFO] [1791960682.280085978] [inspection_mission]: TRANSIT_AVOID_OBSTACLES: xyz=[-2.13  1.71  2.49] clearance=0.75m panel=7.19m hold=0.0s
+[hybrid_controller_node-3] [INFO] [1791960683.643358502] [bluerov2.hybrid_controller]: Mode: position | Switches: 0
+[mission-4] [INFO] [1791960684.280091782] [inspection_mission]: TRANSIT_AVOID_OBSTACLES: xyz=[-2.03  1.73  2.49] clearance=0.73m panel=7.19m hold=0.0s
+[hybrid_controller_node-3] [INFO] [1791960685.643325295] [bluerov2.hybrid_controller]: Mode: position | Switches: 0
+[mission-4] [INFO] [1791960686.280185129] [inspection_mission]: TRANSIT_AVOID_OBSTACLES: xyz=[-1.69  1.73  2.5 ] clearance=0.63m panel=6.73m hold=0.0s
+[hybrid_controller_node-3] [INFO] [1791960687.643613193] [bluerov2.hybrid_controller]: Mode: position | Switches: 0
+[mission-4] [INFO] [1791960688.281448143] [inspection_mission]: TRANSIT_AVOID_OBSTACLES: xyz=[-0.67  1.77  2.46] clearance=0.73m panel=5.87m hold=0.0s
+[thruster_allocator-2] [WARN] [1791960688.284420747] [bluerov2.thruster_allocator]: Thruster demand exceeds T_max=20.68 N - wrench scaled by 0.59
+[thruster_allocator-2] [WARN] [1791960689.304544055] [bluerov2.thruster_allocator]: Thruster demand exceeds T_max=20.68 N - wrench scaled by 0.83
+[hybrid_controller_node-3] [INFO] [1791960689.643286613] [bluerov2.hybrid_controller]: Mode: position | Switches: 0
+[mission-4] [INFO] [1791960690.284294277] [inspection_mission]: TRANSIT_AVOID_OBSTACLES: xyz=[0.31 1.33 2.44] clearance=0.41m panel=4.63m hold=0.0s
+[thruster_allocator-2] [WARN] [1791960691.283724270] [bluerov2.thruster_allocator]: Thruster demand exceeds T_max=20.68 N - wrench scaled by 0.61
+[hybrid_controller_node-3] [INFO] [1791960691.643440019] [bluerov2.hybrid_controller]: Mode: position | Switches: 0
+[thruster_allocator-2] [WARN] [1791960692.283887189] [bluerov2.thruster_allocator]: Thruster demand exceeds T_max=20.68 N - wrench scaled by 0.92
+[mission-4] [INFO] [1791960692.284718259] [inspection_mission]: TRANSIT_AVOID_OBSTACLES: xyz=[1.19 0.58 2.46] clearance=0.98m panel=3.86m hold=0.0s
+[hybrid_controller_node-3] [INFO] [1791960693.643355777] [bluerov2.hybrid_controller]: Mode: position | Switches: 0
+[mission-4] [INFO] [1791960694.382746724] [inspection_mission]: TRANSIT_AVOID_OBSTACLES: xyz=[ 2.3  -0.16  2.46] clearance=2.01m panel=2.80m hold=0.0s
+[mission-4] [INFO] [1791960694.479989722] [inspection_mission]: PHASE=SEARCH_PANEL pose=[2.3461576505858144, -0.183162252173169, 2.4607468742073713]
+[hybrid_controller_node-3] [INFO] [1791960695.643417475] [bluerov2.hybrid_controller]: Mode: position | Switches: 0
+[mission-4] [INFO] [1791960696.180077363] [inspection_mission]: PHASE=VISUAL_APPROACH pose=[2.75779581815485, -0.4182637911917284, 2.47427519132004]
+[hybrid_controller_node-3] [INFO] [1791960696.180432665] [bluerov2.hybrid_controller]: Control mode switched: position → velocity
+[mission-4] [INFO] [1791960696.480079023] [inspection_mission]: VISUAL_APPROACH: xyz=[ 2.78 -0.43  2.47] clearance=2.48m panel=2.33m hold=0.0s
+[hybrid_controller_node-3] [INFO] [1791960697.643437548] [bluerov2.hybrid_controller]: Mode: velocity | Switches: 1
+[mission-4] [INFO] [1791960698.489170839] [inspection_mission]: VISUAL_APPROACH: xyz=[ 3.08 -0.29  2.37] clearance=2.52m panel=2.05m hold=0.0s
+[hybrid_controller_node-3] [INFO] [1791960699.643745906] [bluerov2.hybrid_controller]: Mode: velocity | Switches: 1
+[mission-4] [INFO] [1791960700.584409365] [inspection_mission]: VISUAL_APPROACH: xyz=[ 3.53 -0.06  2.34] clearance=2.65m panel=1.60m hold=0.0s
+[hybrid_controller_node-3] [INFO] [1791960701.643777849] [bluerov2.hybrid_controller]: Mode: velocity | Switches: 1
+[mission-4] [INFO] [1791960702.680367574] [inspection_mission]: VISUAL_APPROACH: xyz=[3.79 0.06 2.4 ] clearance=2.76m panel=1.34m hold=0.0s
+[mission-4] [INFO] [1791960703.280165355] [inspection_mission]: PHASE=INSPECT_HOLD pose=[3.8253348418480506, 0.0778792682127401, 2.416785008129025]
+[hybrid_controller_node-3] [INFO] [1791960703.643351171] [bluerov2.hybrid_controller]: Mode: velocity | Switches: 1
+[mission-4] [INFO] [1791960704.789983907] [inspection_mission]: INSPECT_HOLD: xyz=[3.84 0.09 2.47] clearance=2.77m panel=1.30m hold=1.6s
+[hybrid_controller_node-3] [INFO] [1791960705.643257557] [bluerov2.hybrid_controller]: Mode: velocity | Switches: 1
+[mission-4] [INFO] [1791960706.880105914] [inspection_mission]: INSPECT_HOLD: xyz=[3.8  0.09 2.5 ] clearance=2.74m panel=1.34m hold=3.7s
+[hybrid_controller_node-3] [INFO] [1791960707.643243222] [bluerov2.hybrid_controller]: Mode: velocity | Switches: 1
+[mission-4] [INFO] [1791960708.985887478] [inspection_mission]: INSPECT_HOLD: xyz=[3.78 0.08 2.52] clearance=2.74m panel=1.35m hold=5.8s
+[hybrid_controller_node-3] [INFO] [1791960709.643274246] [bluerov2.hybrid_controller]: Mode: velocity | Switches: 1
+[mission-4] [INFO] [1791960711.080181504] [inspection_mission]: INSPECT_HOLD: xyz=[3.81 0.07 2.52] clearance=2.76m panel=1.35m hold=7.9s
+[mission-4] [INFO] [1791960711.292258064] [inspection_mission]: PHASE=RETURN_HOME pose=[3.810685401409221, 0.06786927102919409, 2.5244211130568526]
+[hybrid_controller_node-3] [INFO] [1791960711.292880346] [bluerov2.hybrid_controller]: Control mode switched: velocity → position
+[thruster_allocator-2] [WARN] [1791960711.383587847] [bluerov2.thruster_allocator]: Thruster demand exceeds T_max=20.68 N - wrench scaled by 0.60
+[hybrid_controller_node-3] [INFO] [1791960711.643517730] [bluerov2.hybrid_controller]: Mode: position | Switches: 2
+[thruster_allocator-2] [WARN] [1791960712.403591078] [bluerov2.thruster_allocator]: Thruster demand exceeds T_max=20.68 N - wrench scaled by 0.80
+[mission-4] [INFO] [1791960713.180273239] [inspection_mission]: RETURN_HOME: xyz=[3.25 0.47 2.33] clearance=2.08m panel=1.70m hold=8.1s
+[hybrid_controller_node-3] [INFO] [1791960713.644969553] [bluerov2.hybrid_controller]: Mode: position | Switches: 2
+[mission-4] [INFO] [1791960715.188038893] [inspection_mission]: RETURN_HOME: xyz=[2.06 1.12 2.18] clearance=0.79m panel=2.98m hold=8.1s
+[hybrid_controller_node-3] [INFO] [1791960715.643900237] [bluerov2.hybrid_controller]: Mode: position | Switches: 2
+[mission-4] [INFO] [1791960717.286806058] [inspection_mission]: RETURN_HOME: xyz=[1.24 1.32 2.33] clearance=0.25m panel=3.79m hold=8.1s
+[hybrid_controller_node-3] [INFO] [1791960717.643593681] [bluerov2.hybrid_controller]: Mode: position | Switches: 2
+[mission-4] [INFO] [1791960719.380192417] [inspection_mission]: RETURN_HOME: xyz=[0.94 1.17 2.46] clearance=0.38m panel=4.13m hold=8.1s
+[hybrid_controller_node-3] [INFO] [1791960719.643281374] [bluerov2.hybrid_controller]: Mode: position | Switches: 2
+[mission-4] [INFO] [1791960721.380213430] [inspection_mission]: RETURN_HOME: xyz=[0.85 1.06 2.46] clearance=0.50m panel=4.21m hold=8.1s
+[hybrid_controller_node-3] [INFO] [1791960721.643695207] [bluerov2.hybrid_controller]: Mode: position | Switches: 2
+[mission-4] [INFO] [1791960723.380988362] [inspection_mission]: RETURN_HOME: xyz=[0.74 1.05 2.46] clearance=0.52m panel=4.39m hold=8.1s
+[hybrid_controller_node-3] [INFO] [1791960723.643744553] [bluerov2.hybrid_controller]: Mode: position | Switches: 2
+[mission-4] [INFO] [1791960725.480092902] [inspection_mission]: RETURN_HOME: xyz=[0.61 1.06 2.48] clearance=0.55m panel=4.44m hold=8.1s
+[hybrid_controller_node-3] [INFO] [1791960725.643295095] [bluerov2.hybrid_controller]: Mode: position | Switches: 2
+[mission-4] [INFO] [1791960727.485107302] [inspection_mission]: RETURN_HOME: xyz=[0.52 1.04 2.49] clearance=0.58m panel=4.53m hold=8.1s
+[hybrid_controller_node-3] [INFO] [1791960727.643307972] [bluerov2.hybrid_controller]: Mode: position | Switches: 2
+[thruster_allocator-2] [WARN] [1791960728.283481118] [bluerov2.thruster_allocator]: Thruster demand exceeds T_max=20.68 N - wrench scaled by 0.75
+[mission-4] [INFO] [1791960729.585701736] [inspection_mission]: RETURN_HOME: xyz=[0.18 1.24 2.48] clearance=0.55m panel=4.69m hold=8.1s
+[hybrid_controller_node-3] [INFO] [1791960729.643310080] [bluerov2.hybrid_controller]: Mode: position | Switches: 2
+[hybrid_controller_node-3] [INFO] [1791960731.643419318] [bluerov2.hybrid_controller]: Mode: position | Switches: 2
+[mission-4] [INFO] [1791960731.688247278] [inspection_mission]: RETURN_HOME: xyz=[-0.78  1.89  2.46] clearance=0.81m panel=5.56m hold=8.1s
+[hybrid_controller_node-3] [INFO] [1791960733.643476803] [bluerov2.hybrid_controller]: Mode: position | Switches: 2
+[mission-4] [INFO] [1791960733.785698249] [inspection_mission]: RETURN_HOME: xyz=[-1.92  2.02  2.46] clearance=0.96m panel=6.84m hold=8.1s
+[hybrid_controller_node-3] [INFO] [1791960735.643533677] [bluerov2.hybrid_controller]: Mode: position | Switches: 2
+[mission-4] [INFO] [1791960735.885945415] [inspection_mission]: RETURN_HOME: xyz=[-2.38  1.88  2.46] clearance=1.02m panel=7.45m hold=8.1s
+[hybrid_controller_node-3] [INFO] [1791960737.643525658] [bluerov2.hybrid_controller]: Mode: position | Switches: 2
+[mission-4] [INFO] [1791960737.887972744] [inspection_mission]: RETURN_HOME: xyz=[-2.26  1.78  2.48] clearance=0.88m panel=7.32m hold=8.1s
+[thruster_allocator-2] [WARN] [1791960738.204053907] [bluerov2.thruster_allocator]: Thruster demand exceeds T_max=20.68 N - wrench scaled by 0.53
+[thruster_allocator-2] [WARN] [1791960739.223770476] [bluerov2.thruster_allocator]: Thruster demand exceeds T_max=20.68 N - wrench scaled by 0.62
+[hybrid_controller_node-3] [INFO] [1791960739.643241749] [bluerov2.hybrid_controller]: Mode: position | Switches: 2
+[mission-4] [INFO] [1791960739.980071847] [inspection_mission]: RETURN_HOME: xyz=[-2.54  1.4   2.4 ] clearance=0.71m panel=7.32m hold=8.1s
+[thruster_allocator-2] [WARN] [1791960740.243605372] [bluerov2.thruster_allocator]: Thruster demand exceeds T_max=20.68 N - wrench scaled by 0.79
+[hybrid_controller_node-3] [INFO] [1791960741.643228736] [bluerov2.hybrid_controller]: Mode: position | Switches: 2
+[mission-4] [INFO] [1791960741.980103197] [inspection_mission]: RETURN_HOME: xyz=[-3.47  0.7   2.33] clearance=1.13m panel=0.00m hold=8.1s
+[hybrid_controller_node-3] [INFO] [1791960743.643526263] [bluerov2.hybrid_controller]: Mode: position | Switches: 2
+[mission-4] [INFO] [1791960743.985722687] [inspection_mission]: RETURN_HOME: xyz=[-4.22  0.18  2.38] clearance=1.78m panel=0.00m hold=8.1s
+[hybrid_controller_node-3] [INFO] [1791960745.644137029] [bluerov2.hybrid_controller]: Mode: position | Switches: 2
+[mission-4] [INFO] [1791960746.088722645] [inspection_mission]: RETURN_HOME: xyz=[-4.62 -0.07  2.45] clearance=1.75m panel=0.00m hold=8.1s
+[hybrid_controller_node-3] [INFO] [1791960747.643285823] [bluerov2.hybrid_controller]: Mode: position | Switches: 2
+[mission-4] [INFO] [1791960748.180104330] [inspection_mission]: RETURN_HOME: xyz=[-4.72 -0.08  2.48] clearance=1.80m panel=0.00m hold=8.1s
+[hybrid_controller_node-3] [INFO] [1791960749.643392038] [bluerov2.hybrid_controller]: Mode: position | Switches: 2
+[mission-4] [INFO] [1791960749.881450177] [inspection_mission]: PHASE=FAILED pose=[-4.741252225370524, -0.042601335088526496, 2.4882757372197752]
+[mission-4] [INFO] [1791960749.881864091] [inspection_mission]: RESULT={"success": false, "reason": "Stale pose or camera", "duration_wall_seconds": 79.90152192115784, "clock_source": "ROS system clock matching upstream sensor stamps; upstream has no /clock publisher", "state_source": "Stonefish ground-truth odometry baseline", "planner": "known-site inflated A* at fixed depth", "perception": "RGB yellow-panel geometric marker detector; no learned model", "current": {"success": true, "message": "Ocean current 0 enabled with velocity [0.000000, 0.100000, 0.000000] m/s."}, "current_velocity_ned": [0.0, 0.1, 0.0], "minimum_obstacle_clearance_m": 0.2485784175212854, "contact_bodies": [], "detected_camera_frames": 429, "inspection_required_seconds": 8.0, "inspection_completed_seconds": 8.093347311019897, "home_error_m": 0.26249331984789753, "inspection_range_rmse_m": 0.03852407394116734, "events": [{"ros_wall_time": 1791960669.97962, "phase": "TRANSIT_AVOID_OBSTACLES", "pose": [-5.002036094913985, 0.00047993065336175255, 2.4961498290231914]}, {"ros_wall_time": 1791960694.479559, "phase": "SEARCH_PANEL", "pose": [2.3461576505858144, -0.183162252173169, 2.4607468742073713]}, {"ros_wall_time": 1791960696.1796026, "phase": "VISUAL_APPROACH", "pose": [2.75779581815485, -0.4182637911917284, 2.47427519132004]}, {"ros_wall_time": 1791960703.2797446, "phase": "INSPECT_HOLD", "pose": [3.8253348418480506, 0.0778792682127401, 2.416785008129025]}, {"ros_wall_time": 1791960711.2918527, "phase": "RETURN_HOME", "pose": [3.810685401409221, 0.06786927102919409, 2.5244211130568526]}, {"ros_wall_time": 1791960749.8810139, "phase": "FAILED", "pose": [-4.741252225370524, -0.042601335088526496, 2.4882757372197752]}]}
+[mission-4] [INFO] [1791960750.181865145] [inspection_mission]: FAILED: xyz=[-4.74 -0.04  2.49] clearance=1.85m panel=0.00m hold=8.1s
+[hybrid_controller_node-3] [INFO] [1791960751.643329581] [bluerov2.hybrid_controller]: Mode: position | Switches: 2
+[mission-4] [INFO] [1791960752.280291830] [inspection_mission]: FAILED: xyz=[-4.56 -0.06  2.48] clearance=1.73m panel=0.00m hold=8.1s
+[hybrid_controller_node-3] [INFO] [1791960753.643620709] [bluerov2.hybrid_controller]: Mode: position | Switches: 2
+[mission-4] [INFO] [1791960754.380006974] [inspection_mission]: FAILED: xyz=[-4.49 -0.08  2.48] clearance=1.68m panel=0.00m hold=8.1s
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[INFO] [viewer-5]: sending signal 'SIGINT' to process[viewer-5]
+[INFO] [mission-4]: sending signal 'SIGINT' to process[mission-4]
+[INFO] [hybrid_controller_node-3]: sending signal 'SIGINT' to process[hybrid_controller_node-3]
+[INFO] [thruster_allocator-2]: sending signal 'SIGINT' to process[thruster_allocator-2]
+[INFO] [stonefish_simulator-1]: sending signal 'SIGINT' to process[stonefish_simulator-1]
+[INFO] [hybrid_controller_node-3]: process has finished cleanly [pid 1990461]
+[INFO] [viewer-5]: process has finished cleanly [pid 1990465]
+[INFO] [mission-4]: process has finished cleanly [pid 1990463]
+[INFO] [thruster_allocator-2]: process has finished cleanly [pid 1990459]
+[INFO] [stonefish_simulator-1]: process has finished cleanly [pid 1990457]

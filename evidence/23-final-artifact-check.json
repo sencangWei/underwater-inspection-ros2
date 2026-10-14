@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "run": "evidence/run08",
+  "mission_seconds": 79.69992017745972,
+  "minimum_clearance_m": 0.2827888020686907,
+  "camera_range_rmse_m": 0.04296524916464904,
+  "home_error_m": 0.24996402708764867,
+  "sensor_pause_recoveries": 4,
+  "verified_source_files": 12,
+  "video_seconds": 82.0,
+  "video_bytes": 13331450
+}

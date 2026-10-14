@@ -1,0 +1,15 @@
+Starting >>> stonefish_control_msgs
+Starting >>> stonefish_msgs
+Starting >>> stonefish_description
+Finished <<< stonefish_description [4.55s]
+Finished <<< stonefish_control_msgs [14.5s]
+Starting >>> stonefish_control
+Starting >>> stonefish_thruster_manager
+Finished <<< stonefish_msgs [15.0s]
+Starting >>> stonefish_ros2
+[Processing: stonefish_control, stonefish_ros2, stonefish_thruster_manager]
+Finished <<< stonefish_control [43.6s]
+Finished <<< stonefish_thruster_manager [43.6s]
+Finished <<< stonefish_ros2 [59.0s]
+
+Summary: 6 packages finished [1min 14s]

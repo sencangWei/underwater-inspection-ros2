@@ -1,0 +1,14 @@
+{
+  "run": "evidence/run08",
+  "start_wall_time": 1791961304.412411,
+  "end_wall_time": 1791961386.3752928,
+  "output_frames": 820,
+  "output_fps": 10,
+  "output_duration_s": 82.0,
+  "sensor_source_frames": 402,
+  "sensor_actual_span_s": 82.21706080436707,
+  "sensor_mean_hz": 4.87733319674571,
+  "renderer_start_wall_time": 1791961304.412411,
+  "sensor_gaps_over_half_second": 21,
+  "alignment": "actual X11 start timestamp + actual sensor frame wall timestamps; repeat previous observation during gaps"
+}

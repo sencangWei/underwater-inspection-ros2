@@ -1,0 +1,45 @@
+{
+  "success": false,
+  "reason": "Stale pose or camera",
+  "duration_wall_seconds": 1.4936647415161133,
+  "clock_source": "ROS system clock matching upstream sensor stamps; upstream has no /clock publisher",
+  "state_source": "Stonefish ground-truth odometry baseline",
+  "planner": "known-site inflated A* at fixed depth",
+  "perception": "RGB yellow-panel geometric marker detector; no learned model",
+  "current": {
+    "success": true,
+    "message": "Ocean current 0 enabled with velocity [0.000000, 0.100000, 0.000000] m/s."
+  },
+  "current_velocity_ned": [
+    0.0,
+    0.1,
+    0.0
+  ],
+  "minimum_obstacle_clearance_m": 2.0332882924104014,
+  "contact_bodies": [],
+  "detected_camera_frames": 0,
+  "inspection_required_seconds": 8.0,
+  "inspection_completed_seconds": 0.0,
+  "home_error_m": 0.011189492766066466,
+  "inspection_range_rmse_m": null,
+  "events": [
+    {
+      "ros_wall_time": 1791959926.152141,
+      "phase": "TRANSIT_AVOID_OBSTACLES",
+      "pose": [
+        -5.002575857796856,
+        0.0009163197049174058,
+        2.4943266770224803
+      ]
+    },
+    {
+      "ros_wall_time": 1791959927.6456923,
+      "phase": "FAILED",
+      "pose": [
+        -5.00299567115228,
+        0.0017046515165173477,
+        2.489354584746639
+      ]
+    }
+  ]
+}

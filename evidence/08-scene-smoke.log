@@ -1,0 +1,102 @@
+[INFO] [launch]: All log files can be found below /home/robot/.ros/log/2026-10-14-14-33-50-332207-robot-MS-7E19-1963037
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [stonefish_simulator-1]: process started with pid [1963070]
+[INFO] [thruster_allocator-2]: process started with pid [1963072]
+[INFO] [position_controller_node-3]: process started with pid [1963074]
+[thruster_allocator-2] [INFO] [1791959630.972601434] [bluerov2.thruster_allocator]: Loading TAM from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/robots/bluerov2/config/TAM.yaml
+[position_controller_node-3] [INFO] [1791959630.972620875] [bluerov2.position_controller_4dof]: ============================================================
+[position_controller_node-3] [INFO] [1791959630.972808540] [bluerov2.position_controller_4dof]: Dynamics Loaded (4DOF)
+[position_controller_node-3] [INFO] [1791959630.972931013] [bluerov2.position_controller_4dof]: ============================================================
+[position_controller_node-3] [INFO] [1791959630.973053111] [bluerov2.position_controller_4dof]: Mass: 20.13 kg
+[position_controller_node-3] [INFO] [1791959630.973174742] [bluerov2.position_controller_4dof]: Inertia (Yaw): 0.1300 kg·m²
+[position_controller_node-3] [INFO] [1791959630.973308471] [bluerov2.position_controller_4dof]: COG: [0.0000, 0.0000, 0.1730] m
+[position_controller_node-3] [INFO] [1791959630.973431740] [bluerov2.position_controller_4dof]: COB: [0.0000, 0.0000, -0.1000] m
+[position_controller_node-3] [INFO] [1791959630.973552999] [bluerov2.position_controller_4dof]: Volume: 0.019582 m³
+[position_controller_node-3] [INFO] [1791959630.973668830] [bluerov2.position_controller_4dof]: ------------------------------------------------------------
+[position_controller_node-3] [INFO] [1791959630.973787601] [bluerov2.position_controller_4dof]: Metacentric Height (GM): -0.2730 m
+[position_controller_node-3] [INFO] [1791959630.973908216] [bluerov2.position_controller_4dof]: Buoyancy: 197.68 N
+[position_controller_node-3] [INFO] [1791959630.974026156] [bluerov2.position_controller_4dof]: Weight: 197.69 N
+[position_controller_node-3] [INFO] [1791959630.974141191] [bluerov2.position_controller_4dof]: Net Force: -0.01 N
+[position_controller_node-3] [INFO] [1791959630.974255952] [bluerov2.position_controller_4dof]: Restoring Coeff: 0.0019 Nm/rad
+[position_controller_node-3] [INFO] [1791959630.974374490] [bluerov2.position_controller_4dof]: ✓ PASSIVE STABILITY OK (|GM| >= 0.15m)
+[position_controller_node-3] [INFO] [1791959630.974492370] [bluerov2.position_controller_4dof]: ============================================================
+[thruster_allocator-2] [INFO] [1791959630.975010975] [bluerov2.thruster_allocator]: TAM loaded successfully: 8 thrusters
+[thruster_allocator-2] [INFO] [1791959630.977252519] [bluerov2.thruster_allocator]: Thruster allocator initialized for bluerov2
+[thruster_allocator-2] [INFO] [1791959630.977394515] [bluerov2.thruster_allocator]: Output topic: /bluerov2/setpoint/pwm
+[thruster_allocator-2] [INFO] [1791959630.977525783] [bluerov2.thruster_allocator]: Update rate: 50.0 Hz
+[thruster_allocator-2] [INFO] [1791959630.977651170] [bluerov2.thruster_allocator]: Timeout: 1.0 s
+[position_controller_node-3] [INFO] [1791959630.990354146] [bluerov2.position_controller_4dof]: ============================================================
+[position_controller_node-3] [INFO] [1791959630.990517149] [bluerov2.position_controller_4dof]: 4DOF PID Controller Initialized
+[position_controller_node-3] [INFO] [1791959630.990645088] [bluerov2.position_controller_4dof]: ============================================================
+[position_controller_node-3] [INFO] [1791959630.990941701] [bluerov2.position_controller_4dof]: Kp: [45. 45. 55.  3.]
+[position_controller_node-3] [INFO] [1791959630.991117205] [bluerov2.position_controller_4dof]: Kd: [40.  40.  50.   1.5]
+[position_controller_node-3] [INFO] [1791959630.991284315] [bluerov2.position_controller_4dof]: Ki: [ 5.   5.  10.   0.5]
+[position_controller_node-3] [INFO] [1791959630.991445528] [bluerov2.position_controller_4dof]: Kb: [0.8 0.8 0.8 0.8]
+[position_controller_node-3] [INFO] [1791959630.991570305] [bluerov2.position_controller_4dof]: Control rate: 50.0 Hz
+[position_controller_node-3] [INFO] [1791959630.991691806] [bluerov2.position_controller_4dof]: Feedforward: True
+[position_controller_node-3] [INFO] [1791959630.991810966] [bluerov2.position_controller_4dof]: ============================================================
+[stonefish_simulator-1] [INFO] Welcome to Stonefish 1.3.
+[stonefish_simulator-1] [INFO] Window created. OpenGL 4.3 contexts created.
+[stonefish_simulator-1] [INFO] Checking GPU capabilities...
+[stonefish_simulator-1] [INFO] Number of texture units available: 192
+[stonefish_simulator-1] [INFO] Maximum texture size: 32768
+[stonefish_simulator-1] [INFO] Maximum number of texture layers: 2048
+[stonefish_simulator-1] [INFO] Maximum number of fragment shader uniforms: 4096
+[stonefish_simulator-1] [INFO] Setting up OpenGL...
+[stonefish_simulator-1] [INFO] Loaded texture from: /home/robot/桌面/机器人仿真/underwater-inspection-ros2/.local/stonefish/share/Stonefish/shaders/logo_64.png
+[stonefish_simulator-1] [INFO] Initializing rendering pipeline:
+[stonefish_simulator-1] [INFO] Loading GUI...
+[stonefish_simulator-1] [INFO] Loaded texture from: /home/robot/桌面/机器人仿真/underwater-inspection-ros2/.local/stonefish/share/Stonefish/shaders/logo_gray_64.png
+[stonefish_simulator-1] [INFO] Loaded texture from: /home/robot/桌面/机器人仿真/underwater-inspection-ros2/.local/stonefish/share/Stonefish/shaders/gui.png
+[stonefish_simulator-1] [INFO] Initialising OpenGL rendering pipeline...
+[stonefish_simulator-1] [INFO] Loading shaders...
+[stonefish_simulator-1] [INFO] Loaded texture from: /home/robot/桌面/机器人仿真/underwater-inspection-ros2/.local/stonefish/share/Stonefish/shaders/flake.png
+[stonefish_simulator-1] [INFO] Initializing simulation:
+[stonefish_simulator-1] [INFO] Building scenario...
+[stonefish_simulator-1] [INFO] Loaded precomputed atmosphere model (20 wavelengths, 5 scattering orders)
+[stonefish_simulator-1] [INFO] Scenario parser: Loading scenario from '/home/robot/underwater-inspection-ros2/install/share/underwater_inspection/scenarios/inspection.scn'.
+[stonefish_simulator-1] [INFO] Scenario parser: Including file '/home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/worlds/common/materials.scn'
+[stonefish_simulator-1] [INFO] Scenario parser: Including file '/home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/worlds/common/visual.scn'
+[stonefish_simulator-1] [INFO] Scenario parser: Including file '/home/robot/underwater-inspection-ros2/install/share/underwater_inspection/scenarios/robot.scn'
+[stonefish_simulator-1] [INFO] Generating ocean waves...
+[stonefish_simulator-1] [INFO] Material Steel (0) created.
+[stonefish_simulator-1] [INFO] Loaded texture from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/worlds/meshes/SoilBeach0078_1_350.jpg
+[stonefish_simulator-1] [INFO] Loaded texture from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/models/gas_canister/meshes/gas_canister.png
+[stonefish_simulator-1] [INFO] Loaded texture from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/models/gas_tank/meshes/gas_tank.png
+[stonefish_simulator-1] [INFO] Loaded texture from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/models/oil_drum/meshes/oil_drum.png
+[stonefish_simulator-1] [INFO] Loaded texture from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/models/rust_pipe/meshes/rust_pipe.png
+[stonefish_simulator-1] [INFO] Loaded texture from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/models/turbines/textures/Turbine_Base_Diffuse.png
+[stonefish_simulator-1] [INFO] Loaded texture from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/models/turbines/textures/Turbine_Main_Diffuse.png
+[stonefish_simulator-1] [INFO] Loaded texture from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/robots/bluerov2/meshes/br2.png
+[stonefish_simulator-1] [INFO] Loading geometry from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/robots/bluerov2/meshes/bluerov2.obj
+[stonefish_simulator-1] [INFO] Loaded mesh with 78450 faces in 115 ms.
+[stonefish_simulator-1] [INFO] Loading geometry from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/robots/bluerov2/meshes/bluerov2_phy.obj
+[stonefish_simulator-1] [INFO] Loaded mesh with 2888 faces in 1 ms.
+[stonefish_simulator-1] [INFO] Loading geometry from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/robots/bluerov2/meshes/bluerov2_wings.obj
+[stonefish_simulator-1] [INFO] Loaded mesh with 85380 faces in 50 ms.
+[stonefish_simulator-1] [INFO] Loading geometry from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/robots/bluerov2/meshes/bluerov2_ring.obj
+[stonefish_simulator-1] [INFO] Loaded mesh with 324 faces in 0 ms.
+[stonefish_simulator-1] [INFO] Built multibody link bluerov2/base_link (mass[kg]: 50.198; inertia[kgm2]: 0.552, 0.765, 1.176; volume[cm3]: 20300.0)
+[stonefish_simulator-1] [INFO] Building kinematic tree of robot 'bluerov2', consisting of 1 links and 0 joints.
+[stonefish_simulator-1] [INFO] Loading geometry from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/robots/bluerov2/meshes/ccw.obj
+[stonefish_simulator-1] [INFO] Loaded mesh with 6359 faces in 2 ms.
+[stonefish_simulator-1] [INFO] Loading geometry from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/robots/bluerov2/meshes/ccw.obj
+[stonefish_simulator-1] [INFO] Loaded mesh with 6359 faces in 2 ms.
+[stonefish_simulator-1] [INFO] Loading geometry from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/robots/bluerov2/meshes/cw.obj
+[stonefish_simulator-1] [INFO] Loaded mesh with 6135 faces in 2 ms.
+[stonefish_simulator-1] [INFO] Loading geometry from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/robots/bluerov2/meshes/cw.obj
+[stonefish_simulator-1] [INFO] Loaded mesh with 6135 faces in 2 ms.
+[stonefish_simulator-1] [INFO] Loading geometry from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/robots/bluerov2/meshes/ccw.obj
+[stonefish_simulator-1] [INFO] Loaded mesh with 6359 faces in 2 ms.
+[stonefish_simulator-1] [INFO] Loading geometry from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/robots/bluerov2/meshes/cw.obj
+[stonefish_simulator-1] [INFO] Loaded mesh with 6135 faces in 3 ms.
+[stonefish_simulator-1] [INFO] Loading geometry from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/robots/bluerov2/meshes/cw.obj
+[stonefish_simulator-1] [INFO] Loaded mesh with 6135 faces in 2 ms.
+[stonefish_simulator-1] [INFO] Loading geometry from: /home/robot/underwater-inspection-ros2/install/share/stonefish_description/data/robots/bluerov2/meshes/ccw.obj
+[stonefish_simulator-1] [INFO] Loaded mesh with 6359 faces in 2 ms.
+[stonefish_simulator-1] [INFO] Scenario parser: Log saved to file '/home/robot/.ros/log/stonefish_ros2_parser.log'.
+[stonefish_simulator-1] [INFO] Finalizing OpenGL rendering pipeline...
+[stonefish_simulator-1] [INFO] Synchronizing motion states...
+[stonefish_simulator-1] [INFO] Simulation initialized -> using Bullet Physics 3.17.
+[stonefish_simulator-1] [INFO] Ready for running...
+[stonefish_simulator-1] [INFO] IC problem solved with 1 iterations in 0.000131 s.
